@@ -55,10 +55,6 @@ protocol = import_module(module_name)
 trackerEvents = getTrackerEvents()
 details = getDetails()
 
-if 'm_instanceList' in scoreResult:
-    for item in scoreResult['m_instanceList']:
-        print item['m_name']
-    
 playerList = details['m_playerList']
  
 for player in playerList:
@@ -71,6 +67,10 @@ for tracker_event in trackerEvents:
     if tracker_event['_event'] == 'NNet.Replay.Tracker.SScoreResultEvent':
         scoreResult = tracker_event
 
+if 'm_instanceList' in scoreResult:
+    for item in scoreResult['m_instanceList']:
+        print item['m_name']
+    
 #debugJson = json.dumps(initdata, encoding="ISO-8859-1", ensure_ascii=False)
 #
 #with io.open('testDetails.json', 'w',  encoding='utf-8') as outfile:
