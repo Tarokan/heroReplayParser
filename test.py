@@ -1,13 +1,17 @@
 from mpyq import mpyq
 import json
-import protocol67985 as protocol
 from importlib import import_module
 import io
 import sys
 
+sys.path.insert(0, 'protocols/')
+import protocol67985 as protocol
+
 relevent = ['Takedowns', 'Deaths', 'ExperienceContribution', 'Healing',
     'SiegeDamage', 'StructureDamage', 'MinionDamage', 'SelfHealing',
     'DamageTaken', 'DamageSoaked']
+
+filePath = './testreplays/Dragon Shire (56).StormReplay'
 
 commandLineArgs = sys.argv[1:]
 
@@ -41,7 +45,7 @@ def getDetails():
     return details
 
 #Open the archive
-archive = mpyq.MPQArchive('Dragon Shire (56).StormReplay')
+archive = mpyq.MPQArchive(filePath)
 
 #Parse the header
 header = protocol.decode_replay_header(archive.header['user_data_header']['content'])
