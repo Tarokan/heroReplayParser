@@ -26,6 +26,7 @@ import pprint
 import json
 
 from mpyq import mpyq
+sys.path.insert(0, 'protocols/')
 import protocol29406
 
 class EventLogger:
@@ -41,7 +42,7 @@ class EventLogger:
             self._event_stats[event['_event']] = stat
         # write structure
         if args.json:
-            s = json.dumps(event, encoding="ISO-8859-1")
+            s = json.dumps(event, encoding="ISO-8859-1", sort_keys=True, indent=4, separators=(',', ': '))
             print(s)
         else:
             pprint.pprint(event, stream=output)
