@@ -4,6 +4,9 @@ from importlib import import_module
 from sqlconnector import GameSQLConnector
 import io
 import sys
+import re
+
+regex = re.compile('[^a-zA-Z]')
 
 sys.path.insert(0, 'protocols/')
 import protocol67985 as protocol
@@ -68,9 +71,9 @@ def getTeams(detailsPlayerList, heroPlayer):
     enemyHeroList = []
     for player in detailsPlayerList:
         if player['m_teamId'] == heroPlayer.team and player['m_toon']['m_id'] != heroPlayer.id:
-            alliedHeroList.append(player['m_hero'])
+            alliedHeroList.append(regex.sub('', player['m_hero']))
         if player['m_teamId'] != heroPlayer.team:
-            enemyHeroList.append(player['m_hero'])
+            enemyHeroList.append(regex.sub('', player['m_hero']))
     return { 'alliedHeroList': alliedHeroList, 'enemyHeroList': enemyHeroList }
 
 #Open the archive
@@ -103,8 +106,6 @@ for player in playerList:
             mainPlayer.result = 'W'
         elif player['m_result'] == 2:
             mainPlayer.result = 'L'
-
-teamList = getTeams(playerList, mainPlayer)
 
 for tracker_event in trackerEvents:
     if tracker_event['_event'] == 'NNet.Replay.Tracker.SScoreResultEvent':
@@ -144,4 +145,9 @@ if mainPlayer is not None:
         mainPlayer.heroDamage, mainPlayer.healing, mainPlayer.siegeDamage, 
         mainPlayer.structureDamage, mainPlayer.minionDamage, mainPlayer.selfHealing,
         mainPlayer.damageTaken, mainPlayer.damageSoaked, mainPlayer.experience)
-    gameSQLConnector.addPlayerData(data_game, mainPlayer.name, mainPlayer.id)
+    player_id = gameSQLConnector.getPlayerDatabaseID(mainPlayer.name, mainPlayer.id)
+    entry_id = gameSQLConnector.addHeroData(data_game, player_id)
+
+    teamList = getTeams(playerList, mainPlayer)
+    gameSQLConnector.addAlliedHeroes(teamList['alliedHeroList'], entry_id, player_id)
+    gameSQLConnector.addEnemyHeroes(teamList['enemyHeroList'], entry_id, player_id)

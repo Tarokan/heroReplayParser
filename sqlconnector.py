@@ -40,7 +40,7 @@ createTableCommand = (
 "    `enemyHero5` CHAR(20),"
 "   PRIMARY KEY (`game_id`)) ENGINE=InnoDB")
 
-add_game = ("INSERT INTO games "
+add_game = ("INSERT INTO {} "
             "(result, playerHero, playerTakedowns,"
             "playerDeaths, playerHeroDamage, playerHealing, playerSiegeDamage, playerStructureDamage,"
             "playerMinionDamage, playerSelfHealing, playerDamageTaken,"
@@ -101,12 +101,42 @@ class GameSQLConnector:
         except Error as e:
             print(e)
             exit(0)
-    
-    def addHeroData(self, game_data, table_name):
-        self.createTable(table_name)
-        self.cursor.execute(add_game, game_data)
+
+    def getPlayerDatabaseID(self, player_name, player_id):
+        return PLAYER_PREFIX.format(player_name, player_id)
+
+    def addHeroData(self, game_data, playerDatabaseID):
+        self.createTable(playerDatabaseID)
+        self.cursor.execute(add_game.format(playerDatabaseID), game_data)
+        gameId = self.cursor.lastrowid
+        self.conn.commit()
+        return gameId
+
+    def addAlliedHeroes(self, allyArray, game_id, playerDatabaseID):
+        addAlliedHeroesStatement = ("UPDATE {}.{} "
+            "SET alliedHero1 = '{}', "
+            "alliedHero2 = '{}', "
+            "alliedHero3 = '{}', "
+            "alliedHero4 = '{}' "
+            "WHERE game_id = {}").format(DB_NAME, playerDatabaseID, allyArray[0], allyArray[1],
+            allyArray[2], allyArray[3], game_id)
+        #print(addAlliedHeroesStatement)
+        self.cursor.execute(addAlliedHeroesStatement)
         self.conn.commit()
 
-    def addPlayerData(self, game_data, player_name, player_id):
-        self.addHeroData(game_data, PLAYER_PREFIX.format(player_name, player_id))
-
+    def addEnemyHeroes(self, enemyArray, game_id, playerDatabaseID):
+        addEnemyHeroesStatement = ("UPDATE {}.{} "
+            "SET enemyHero1 = '{}', "
+            "enemyHero2 = '{}', "
+            "enemyHero3 = '{}', "
+            "enemyHero4 = '{}', "
+            "enemyHero5 = '{}' "
+            "WHERE game_id = {}").format(DB_NAME, playerDatabaseID, enemyArray[0], enemyArray[1],
+            enemyArray[2], enemyArray[3], enemyArray[4], game_id)
+        print(addEnemyHeroesStatement)
+        self.cursor.execute(addEnemyHeroesStatement)
+        self.conn.commit()
+#         UPDATE customers
+# SET state = 'California',
+#     customer_rep = 32
+# WHERE customer_id > 100;
