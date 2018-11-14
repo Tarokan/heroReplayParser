@@ -26,10 +26,12 @@ class HeroPlayer:
 
     combatData = {}
 
-    def __init__(self, hero, name, slot):
+    def __init__(self, hero, name, slot, id):
         self.hero = hero
         self.name = name
         self.slot = slot
+        self.id = id
+        self.team = 0
         
         self.takedowns = 0
         self.deaths = 0
@@ -61,6 +63,16 @@ def getDetails():
     details = protocol.decode_replay_details(detailsStack)
     return details
 
+def getTeams(detailsPlayerList, heroPlayer):
+    alliedHeroList = []
+    enemyHeroList = []
+    for player in detailsPlayerList:
+        if player['m_teamId'] == heroPlayer.team and player['m_toon']['m_id'] != heroPlayer.id:
+            alliedHeroList.append(player['m_hero'])
+        if player['m_teamId'] != heroPlayer.team:
+            enemyHeroList.append(player['m_hero'])
+    return { 'alliedHeroList': alliedHeroList, 'enemyHeroList': enemyHeroList }
+
 #Open the archive
 archive = mpyq.MPQArchive(filePath)
 
@@ -83,12 +95,16 @@ mainPlayer = None
 for player in playerList:
     if player['m_name'] == requestedPlayerName:
         print(requestedPlayerName + " found!")
-        mainPlayer = HeroPlayer(player['m_hero'], player['m_name'], player['m_workingSetSlotId'])
+        mainPlayer = HeroPlayer(player['m_hero'], player['m_name'], player['m_workingSetSlotId'],
+            player['m_toon']['m_id'])
+        mainPlayer.team = player['m_teamId']
         mainPlayer.printInformation()
         if player['m_result'] == 1:
             mainPlayer.result = 'W'
         elif player['m_result'] == 2:
             mainPlayer.result = 'L'
+
+teamList = getTeams(playerList, mainPlayer)
 
 for tracker_event in trackerEvents:
     if tracker_event['_event'] == 'NNet.Replay.Tracker.SScoreResultEvent':
@@ -128,31 +144,4 @@ if mainPlayer is not None:
         mainPlayer.heroDamage, mainPlayer.healing, mainPlayer.siegeDamage, 
         mainPlayer.structureDamage, mainPlayer.minionDamage, mainPlayer.selfHealing,
         mainPlayer.damageTaken, mainPlayer.damageSoaked, mainPlayer.experience)
-    gameSQLConnector.addGameData(data_game)
-
-# result, playerHero, playerTakedowns, playerDeaths, herodmg, helaing, playerSiegeDamage, playerStructureDamage
-# playerMinionDamage, playerSelfHeadling, playerDamageTaken, playerDamageSoaked, 
-
-#debugJson = json.dumps(initdata, encoding="ISO-8859-1", ensure_ascii=False)
-#
-#with io.open('testDetails.json', 'w',  encoding='utf-8') as outfile:
-#    outfile.write(debugJson)
-
-
-## Let's grab 4 things for now: m_hero, m_name, m_result, m_workingSetSlotId
-
-
-'''
-    Tyrande
-    Kael'thas
-    Zarya
-    Stitches
-    Sylvanas
-    
-    Azmodan
-    Tracer
-    Rehgar
-    Nazeebo
-    Muradin (me :))
-'''
-
+    gameSQLConnector.addPlayerData(data_game, mainPlayer.name, mainPlayer.id)
