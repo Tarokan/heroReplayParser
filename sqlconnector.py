@@ -8,6 +8,7 @@ PLAYER_PREFIX = 'P_{}_{}'
 createTableCommand = (
 "CREATE TABLE `{}` ("
 "   `game_id` INT AUTO_INCREMENT,"
+"   `game_type` enum('HeroLeague', 'QuickPlay', 'TeamLeague', 'Other'),"
 "   `result` enum('W', 'L') NOT NULL,"
 "   `playerHero` CHAR(20),"
 "   `playerTakedowns` SMALLINT UNSIGNED,"
