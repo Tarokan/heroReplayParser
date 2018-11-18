@@ -2,6 +2,7 @@ from mpyq import mpyq
 import json
 from importlib import import_module
 from sqlconnector import GameSQLConnector
+import sqlconnector
 import io
 import sys
 import re
@@ -10,8 +11,6 @@ regex = re.compile('[^a-zA-Z]')
 
 sys.path.insert(0, 'protocols/')
 import protocol67985 as protocol
-
-#filePath = './testreplays/Dragon Shire (56).StormReplay'
 
 class HeroPlayer:
 
@@ -34,6 +33,8 @@ class HeroPlayer:
         self.damageSoaked = 0
         self.result = ''
         self.experience = 0
+
+        self.databaseID = sqlconnector.getPlayerDatabaseID(self.name, self.id)
 
     def printInformation(self):
         print(self.name + " played " + self.hero + " in slot " + str(self.slot))
@@ -80,10 +81,18 @@ class ReplayParser:
                 enemyHeroList.append(regex.sub('', player['m_hero']))
         return { 'alliedHeroList': alliedHeroList, 'enemyHeroList': enemyHeroList }
     
-    def addReplayToDatabase(self):
+    def getTalentChoices(self, heroPlayer):
         trackerEvents = self.getTrackerEvents()
+        talents = []
+        for trackerEvent in trackerEvents:
+            if 'm_eventName' in trackerEvent and trackerEvent['m_eventName'] == "EndOfGameTalentChoices" and trackerEvent['m_intData'][0]['m_value'] == heroPlayer.slot + 1:
+                for stringData in trackerEvent['m_stringData']:
+                    if stringData['m_key'][0:4] == 'Tier':
+                        talents.append(stringData['m_value'])
+        return talents
+
+    def findPlayerID(self):
         details = self.getDetails()
-        
         playerList = details['m_playerList']
         
         for player in playerList:
@@ -97,7 +106,16 @@ class ReplayParser:
                     mainPlayer.result = 'W'
                 elif player['m_result'] == 2:
                     mainPlayer.result = 'L'
-        
+
+        return mainPlayer
+
+    def addReplayToDatabase(self):
+        trackerEvents = self.getTrackerEvents()
+        details = self.getDetails()
+
+        mainPlayer = self.findPlayerID()
+        playerList = details['m_playerList']
+
         for tracker_event in trackerEvents:
             if tracker_event['_event'] == 'NNet.Replay.Tracker.SScoreResultEvent':
                 scoreResult = tracker_event
@@ -136,28 +154,34 @@ class ReplayParser:
                 mainPlayer.heroDamage, mainPlayer.healing, mainPlayer.siegeDamage, 
                 mainPlayer.structureDamage, mainPlayer.minionDamage, mainPlayer.selfHealing,
                 mainPlayer.damageTaken, mainPlayer.damageSoaked, mainPlayer.experience)
-            player_id = gameSQLConnector.getPlayerDatabaseID(mainPlayer.name, mainPlayer.id)
+            player_id = sqlconnector.getPlayerDatabaseID(mainPlayer.name, mainPlayer.id)
             entry_id = gameSQLConnector.addHeroData(data_game, player_id)
         
             teamList = self.getTeams(playerList, mainPlayer)
             gameSQLConnector.addAlliedHeroes(teamList['alliedHeroList'], entry_id, player_id)
             gameSQLConnector.addEnemyHeroes(teamList['enemyHeroList'], entry_id, player_id)
+            gameSQLConnector.addMap(details['m_title'], entry_id, player_id)
+            gameSQLConnector.addTalentChoices(self.getTalentChoices(heroPlayer), entry_id, player_id)
 
 commandLineArgs = sys.argv[1:]
 
 requestedPlayerName = '';
-print(len(commandLineArgs))
 if len(commandLineArgs) == 3:
     requestedPlayerName = commandLineArgs[0]
     print("Looking for replays with player name " + requestedPlayerName)
     if commandLineArgs[1] == 'add':
         parser = ReplayParser(commandLineArgs[2], commandLineArgs[0])
+        heroPlayer = parser.findPlayerID()
+        print("your id is {}.".format(heroPlayer.id))
         parser.addReplayToDatabase()
     if commandLineArgs[1] == 'poll':
-        print("lol not implemented yet")
+        databaseID = sqlconnector.getPlayerDatabaseID(commandLineArgs[0], commandLineArgs[2])
+        gameSQLConnector = GameSQLConnector()
+        dictionary = gameSQLConnector.queryData(databaseID, "")
+        print(dictionary)
 else:
     print("Please use one of the following commands")
     print("uses: test.py [playername] [add] [replayFilePath]")
-    print("uses: test.py [playername] [poll] [hero]")
+    print("uses: test.py [playername] [poll] [id]")
 
 exit(0);

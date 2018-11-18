@@ -1,0 +1,9 @@
+{
+	"database": "heroes",
+	"columns": [
+		{
+			"name": "playerTakedowns",
+			"type": "SMALLINT UNSIGNED"
+		}
+	]
+}

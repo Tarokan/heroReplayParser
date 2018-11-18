@@ -5,6 +5,15 @@ from ConfigParser import ConfigParser
 DB_NAME = 'heroes'
 PLAYER_PREFIX = 'P_{}_{}'
 
+tableColumns = ['game_id', 'game_type', 'result', 'playerHero', 'playerTakedowns',
+    'playerDeaths', 'playerHeroDamage', 'playerHealing', 'playerSiegeDamage',
+    'playerStructureDamage', 'playerMinionDamage', 'playerSelfHealing',
+    'playerDamageTaken', 'playerDamageSoaked', 'playerExperience', 'map',
+    'talentChoice1', 'talentChoice2', 'talentChoice3', 'talentChoice4',
+    'talentChoice5', 'talentChoice6', 'talentChoice7', 'alliedHero1',
+    'alliedHero2', 'alliedHero3', 'alliedHero4', 'enemyHero1', 'enemyHero2',
+    'enemyHero3', 'enemyHero4', 'enemyHero5']
+
 createTableCommand = (
 "CREATE TABLE `{}` ("
 "   `game_id` INT AUTO_INCREMENT,"
@@ -46,6 +55,9 @@ add_game = ("INSERT INTO {} "
             "playerDeaths, playerHeroDamage, playerHealing, playerSiegeDamage, playerStructureDamage,"
             "playerMinionDamage, playerSelfHealing, playerDamageTaken,"
             "playerDamageSoaked, playerExperience) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
+
+def getPlayerDatabaseID(player_name, player_id):
+    return PLAYER_PREFIX.format(player_name, player_id)
 
 class GameSQLConnector:
 
@@ -103,8 +115,6 @@ class GameSQLConnector:
             print(e)
             exit(0)
 
-    def getPlayerDatabaseID(self, player_name, player_id):
-        return PLAYER_PREFIX.format(player_name, player_id)
 
     def addHeroData(self, game_data, playerDatabaseID):
         self.createTable(playerDatabaseID)
@@ -112,6 +122,23 @@ class GameSQLConnector:
         gameId = self.cursor.lastrowid
         self.conn.commit()
         return gameId
+
+    def addMap(self, mapName, game_id, playerDatabaseID):
+        addMapStatement = ("UPDATE {}.{} SET map = '{}' WHERE game_id = {}").format(DB_NAME, playerDatabaseID, mapName, game_id)
+        self.cursor.execute(addMapStatement)
+        self.conn.commit()
+
+    def addTalentChoices(self, talents, game_id, playerDatabaseID):
+        if len(talents) == 0:
+            return
+        baseStatement = ("UPDATE {}.{} SET ").format(DB_NAME, playerDatabaseID)
+        for i in range(0, len(talents)):
+            baseStatement = baseStatement + " talentChoice{} = '{} '".format(i + 1, talents[i])
+            if i != len(talents) - 1:
+                baseStatement = baseStatement + ","
+        baseStatement = baseStatement + " WHERE game_id = {}".format(game_id);
+        self.cursor.execute(baseStatement)
+        self.conn.commit()
 
     def addAlliedHeroes(self, allyArray, game_id, playerDatabaseID):
         addAlliedHeroesStatement = ("UPDATE {}.{} "
@@ -137,6 +164,14 @@ class GameSQLConnector:
         print(addEnemyHeroesStatement)
         self.cursor.execute(addEnemyHeroesStatement)
         self.conn.commit()
+
+    def queryData(self, playerDatabaseID, item):
+        someStatement = "SELECT AVG(playerHeroDamage) 'avgPlayerHeroDamage' FROM heroes.p_midreadias_67731;"
+        self.cursor.execute(someStatement)
+
+        for (avgPlayerHeroDamage) in self.cursor:
+            print("this player average hero damage is {}").format(avgPlayerHeroDamage)
+            return avgPlayerHeroDamage
 #         UPDATE customers
 # SET state = 'California',
 #     customer_rep = 32
