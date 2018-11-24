@@ -1,0 +1,2837 @@
+{
+  "0": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroTychus",
+    "name": "Tychus",
+    "mapStats": {},
+    "playerId": 0,
+    "unitTagIndex": 128,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 15,
+      "levelEvents": [
+        {
+          "seconds": 3,
+          "level": 1
+        },
+        {
+          "seconds": 99,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 158,
+          "level": 4
+        },
+        {
+          "seconds": 180,
+          "level": 5
+        },
+        {
+          "seconds": 201,
+          "level": 6
+        },
+        {
+          "seconds": 283,
+          "level": 7
+        },
+        {
+          "seconds": 325,
+          "level": 8
+        },
+        {
+          "seconds": 362,
+          "level": 9
+        },
+        {
+          "seconds": 399,
+          "level": 10
+        },
+        {
+          "seconds": 440,
+          "level": 11
+        },
+        {
+          "seconds": 541,
+          "level": 12
+        },
+        {
+          "seconds": 609,
+          "level": 13
+        },
+        {
+          "seconds": 696,
+          "level": 14
+        },
+        {
+          "seconds": 799,
+          "level": 15
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 43,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 0,
+      "TimeCCdEnemyHeroes": 0,
+      "PlaysSupport": 0,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 0,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 23765,
+      "killCountMinions": 24,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 0,
+      "totalOutDmg": 90001,
+      "WinsWarcraft": 0,
+      "WinsDiablo": 0,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 0,
+      "fortsDestroyed": 0,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 1,
+      "TeamTakedowns": 21,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [
+        {
+          "seconds": 271,
+          "gameloops": 4337,
+          "y": 86,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 104
+        },
+        {
+          "seconds": 396,
+          "gameloops": 6349,
+          "y": 82,
+          "killers": [
+            6,
+            7,
+            8
+          ],
+          "soloDeath": false,
+          "x": 138
+        }
+      ],
+      "deathCount": 2,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 4721,
+      "DamageTaken": 27311,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 0,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 45163,
+      "secondsDead": 43,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 1483,
+      "TeamfightDamageTaken": 20859,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 0,
+      "soloDeathsCount": 0,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 0,
+      "pickedTalents": [
+        {
+          "seconds": 54,
+          "talent_name": "TychusMasteryRunandGunDash"
+        },
+        {
+          "seconds": 173,
+          "talent_name": "TychusMasterAssassin"
+        },
+        {
+          "seconds": 290,
+          "talent_name": "TychusMasteryQuarterback"
+        },
+        {
+          "seconds": 447,
+          "talent_name": "TychusHeroicAbilityDrakkenLaserDrill"
+        },
+        {
+          "seconds": 623,
+          "talent_name": "TychusThatsTheStuff"
+        }
+      ],
+      "EscapesPerformed": 1,
+      "MercCampCaptures": 1,
+      "HighestKillStreak": 1,
+      "TeamfightHeroDamage": 25981,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 38633,
+      "OnFireTimeOnFire": 0,
+      "Takedowns": 3,
+      "PlaysStarCraft": 1,
+      "Deaths": 2,
+      "SoloKill": 0,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 15,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 0,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 0,
+      "MinionDamage": 18344,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 0,
+      "WinsWarrior": 0,
+      "TeamLevel": 15,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 3862,
+      "OutnumberedDeaths": 0,
+      "Assists": 3,
+      "Healing": 0,
+      "PlaysAssassin": 1,
+      "TimeRootingEnemyHeroes": 0,
+      "killCountBuildings": 0,
+      "WinsMale": 0,
+      "StructureDamage": 700,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 22135,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 3838,
+      "WinsAssassin": 0,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 24,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 0,
+    "isHuman": true,
+    "id": 0
+  },
+  "1": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroRaynor",
+    "name": "Raynor",
+    "mapStats": {},
+    "playerId": 1,
+    "unitTagIndex": 131,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 15,
+      "levelEvents": [
+        {
+          "seconds": 3,
+          "level": 1
+        },
+        {
+          "seconds": 99,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 158,
+          "level": 4
+        },
+        {
+          "seconds": 180,
+          "level": 5
+        },
+        {
+          "seconds": 201,
+          "level": 6
+        },
+        {
+          "seconds": 283,
+          "level": 7
+        },
+        {
+          "seconds": 325,
+          "level": 8
+        },
+        {
+          "seconds": 362,
+          "level": 9
+        },
+        {
+          "seconds": 399,
+          "level": 10
+        },
+        {
+          "seconds": 440,
+          "level": 11
+        },
+        {
+          "seconds": 541,
+          "level": 12
+        },
+        {
+          "seconds": 609,
+          "level": 13
+        },
+        {
+          "seconds": 696,
+          "level": 14
+        },
+        {
+          "seconds": 799,
+          "level": 15
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 155,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 0,
+      "TimeCCdEnemyHeroes": 105,
+      "PlaysSupport": 0,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 0,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 27293,
+      "killCountMinions": 19,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 0,
+      "totalOutDmg": 100755,
+      "WinsWarcraft": 0,
+      "WinsDiablo": 0,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 2,
+      "fortsDestroyed": 0,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 1,
+      "TeamTakedowns": 0,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [
+        {
+          "seconds": 80,
+          "gameloops": 1295,
+          "y": 102,
+          "killers": [
+            6,
+            7,
+            9,
+            10
+          ],
+          "soloDeath": true,
+          "x": 124
+        },
+        {
+          "seconds": 267,
+          "gameloops": 4285,
+          "y": 74,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 111
+        },
+        {
+          "seconds": 475,
+          "gameloops": 7613,
+          "y": 131,
+          "killers": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "soloDeath": false,
+          "x": 116
+        },
+        {
+          "seconds": 537,
+          "gameloops": 8604,
+          "y": 148,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 127
+        },
+        {
+          "seconds": 646,
+          "gameloops": 10341,
+          "y": 92,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 100
+        },
+        {
+          "seconds": 760,
+          "gameloops": 12160,
+          "y": 116,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 50
+        }
+      ],
+      "deathCount": 6,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 6620,
+      "DamageTaken": 31111,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 0,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 45163,
+      "secondsDead": 155,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 8263,
+      "TeamfightDamageTaken": 20077,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 0,
+      "soloDeathsCount": 1,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 0,
+      "pickedTalents": [
+        {
+          "seconds": 36,
+          "talent_name": "RaynorVeteranMarksman"
+        },
+        {
+          "seconds": 163,
+          "talent_name": "RaynorBasicAttackSustainingRounds"
+        },
+        {
+          "seconds": 298,
+          "talent_name": "RaynorGiveEmSomePepperUnstableCompound"
+        },
+        {
+          "seconds": 405,
+          "talent_name": "RaynorHeroicAbilityRaynorsRaiders"
+        },
+        {
+          "seconds": 623,
+          "talent_name": "RaynorInspireGiddyUp"
+        }
+      ],
+      "EscapesPerformed": 1,
+      "MercCampCaptures": 1,
+      "HighestKillStreak": 4,
+      "TeamfightHeroDamage": 18075,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 30264,
+      "OnFireTimeOnFire": 0,
+      "Takedowns": 4,
+      "PlaysStarCraft": 1,
+      "Deaths": 6,
+      "SoloKill": 3,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 15,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 0,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 0,
+      "MinionDamage": 20673,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 0,
+      "WinsWarrior": 0,
+      "TeamLevel": 15,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 3807,
+      "OutnumberedDeaths": 2,
+      "Assists": 1,
+      "Healing": 0,
+      "PlaysAssassin": 1,
+      "TimeRootingEnemyHeroes": 0,
+      "killCountBuildings": 0,
+      "WinsMale": 0,
+      "StructureDamage": 0,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 18375,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 15905,
+      "WinsAssassin": 0,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 19,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 0,
+    "isHuman": true,
+    "id": 1
+  },
+  "2": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroVarian",
+    "name": "Varian",
+    "mapStats": {},
+    "playerId": 2,
+    "unitTagIndex": 133,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 15,
+      "levelEvents": [
+        {
+          "seconds": 4,
+          "level": 1
+        },
+        {
+          "seconds": 99,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 158,
+          "level": 4
+        },
+        {
+          "seconds": 180,
+          "level": 5
+        },
+        {
+          "seconds": 201,
+          "level": 6
+        },
+        {
+          "seconds": 283,
+          "level": 7
+        },
+        {
+          "seconds": 325,
+          "level": 8
+        },
+        {
+          "seconds": 362,
+          "level": 9
+        },
+        {
+          "seconds": 399,
+          "level": 10
+        },
+        {
+          "seconds": 440,
+          "level": 11
+        },
+        {
+          "seconds": 541,
+          "level": 12
+        },
+        {
+          "seconds": 609,
+          "level": 13
+        },
+        {
+          "seconds": 696,
+          "level": 14
+        },
+        {
+          "seconds": 799,
+          "level": 15
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 159,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 0,
+      "TimeCCdEnemyHeroes": 66,
+      "PlaysSupport": 0,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 0,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 12808,
+      "killCountMinions": 10,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 0,
+      "totalOutDmg": 44534,
+      "WinsWarcraft": 0,
+      "WinsDiablo": 0,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 0,
+      "fortsDestroyed": 0,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 1,
+      "TeamTakedowns": 0,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [
+        {
+          "seconds": 110,
+          "gameloops": 1774,
+          "y": 89,
+          "killers": [
+            6,
+            7,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 116
+        },
+        {
+          "seconds": 237,
+          "gameloops": 3806,
+          "y": 101,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": true,
+          "x": 111
+        },
+        {
+          "seconds": 478,
+          "gameloops": 7651,
+          "y": 132,
+          "killers": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "soloDeath": false,
+          "x": 116
+        },
+        {
+          "seconds": 563,
+          "gameloops": 9022,
+          "y": 93,
+          "killers": [
+            6,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 105
+        },
+        {
+          "seconds": 658,
+          "gameloops": 10530,
+          "y": 95,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 84
+        },
+        {
+          "seconds": 761,
+          "gameloops": 12185,
+          "y": 122,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 52
+        }
+      ],
+      "deathCount": 6,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 1336,
+      "DamageTaken": 57772,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 1,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 45163,
+      "secondsDead": 159,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 8966,
+      "TeamfightDamageTaken": 48402,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 0,
+      "soloDeathsCount": 1,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 1,
+      "pickedTalents": [
+        {
+          "seconds": 28,
+          "talent_name": "VarianParryOverpower"
+        },
+        {
+          "seconds": 169,
+          "talent_name": "VarianTaunt"
+        },
+        {
+          "seconds": 289,
+          "talent_name": "VarianSecondWind"
+        },
+        {
+          "seconds": 421,
+          "talent_name": "VarianChargeWarbringer"
+        },
+        {
+          "seconds": 639,
+          "talent_name": "VarianMortalStrike"
+        }
+      ],
+      "EscapesPerformed": 0,
+      "MercCampCaptures": 1,
+      "HighestKillStreak": 4,
+      "TeamfightHeroDamage": 12730,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 17667,
+      "OnFireTimeOnFire": 12,
+      "Takedowns": 4,
+      "PlaysStarCraft": 0,
+      "Deaths": 6,
+      "SoloKill": 1,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 14,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 0,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 0,
+      "MinionDamage": 11472,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 0,
+      "WinsWarrior": 0,
+      "TeamLevel": 15,
+      "TimeSilencingEnemyHeroes": 12,
+      "ExperienceContribution": 4938,
+      "OutnumberedDeaths": 6,
+      "Assists": 3,
+      "Healing": 0,
+      "PlaysAssassin": 1,
+      "TimeRootingEnemyHeroes": 0,
+      "killCountBuildings": 0,
+      "WinsMale": 0,
+      "StructureDamage": 0,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 34013,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 1251,
+      "WinsAssassin": 0,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 10,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 0,
+    "isHuman": true,
+    "id": 2
+  },
+  "3": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroThrall",
+    "name": "Thrall",
+    "mapStats": {},
+    "playerId": 3,
+    "unitTagIndex": 135,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 15,
+      "levelEvents": [
+        {
+          "seconds": 4,
+          "level": 1
+        },
+        {
+          "seconds": 99,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 158,
+          "level": 4
+        },
+        {
+          "seconds": 180,
+          "level": 5
+        },
+        {
+          "seconds": 201,
+          "level": 6
+        },
+        {
+          "seconds": 283,
+          "level": 7
+        },
+        {
+          "seconds": 325,
+          "level": 8
+        },
+        {
+          "seconds": 362,
+          "level": 9
+        },
+        {
+          "seconds": 399,
+          "level": 10
+        },
+        {
+          "seconds": 440,
+          "level": 11
+        },
+        {
+          "seconds": 541,
+          "level": 12
+        },
+        {
+          "seconds": 609,
+          "level": 13
+        },
+        {
+          "seconds": 696,
+          "level": 14
+        },
+        {
+          "seconds": 799,
+          "level": 15
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 122,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 0,
+      "TimeCCdEnemyHeroes": 77,
+      "PlaysSupport": 0,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 0,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 42053,
+      "killCountMinions": 36,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 0,
+      "totalOutDmg": 111151,
+      "WinsWarcraft": 0,
+      "WinsDiablo": 0,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 0,
+      "fortsDestroyed": 0,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 1,
+      "TeamTakedowns": 0,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [
+        {
+          "seconds": 410,
+          "gameloops": 6560,
+          "y": 169,
+          "killers": [
+            10
+          ],
+          "soloDeath": false,
+          "x": 106
+        },
+        {
+          "seconds": 462,
+          "gameloops": 7401,
+          "y": 131,
+          "killers": [
+            6,
+            7,
+            8,
+            10
+          ],
+          "soloDeath": false,
+          "x": 108
+        },
+        {
+          "seconds": 699,
+          "gameloops": 11186,
+          "y": 108,
+          "killers": [
+            6,
+            7,
+            8,
+            10
+          ],
+          "soloDeath": false,
+          "x": 76
+        },
+        {
+          "seconds": 774,
+          "gameloops": 12398,
+          "y": 123,
+          "killers": [
+            6,
+            7,
+            8,
+            10
+          ],
+          "soloDeath": false,
+          "x": 44
+        }
+      ],
+      "deathCount": 4,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 5363,
+      "DamageTaken": 49060,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 1,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 45163,
+      "secondsDead": 122,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 22334,
+      "TeamfightDamageTaken": 25017,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 0,
+      "soloDeathsCount": 0,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 0,
+      "pickedTalents": [
+        {
+          "seconds": 15,
+          "talent_name": "ThrallMasteryRollingThunder"
+        },
+        {
+          "seconds": 187,
+          "talent_name": "ThrallFeralResilience"
+        },
+        {
+          "seconds": 291,
+          "talent_name": "ThrallMaelstromWeapon"
+        },
+        {
+          "seconds": 424,
+          "talent_name": "ThrallHeroicAbilityEarthquake"
+        },
+        {
+          "seconds": 612,
+          "talent_name": "ThrallMasteryGraceOfAir"
+        }
+      ],
+      "EscapesPerformed": 0,
+      "MercCampCaptures": 0,
+      "HighestKillStreak": 0,
+      "TeamfightHeroDamage": 13656,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 26575,
+      "OnFireTimeOnFire": 0,
+      "Takedowns": 1,
+      "PlaysStarCraft": 0,
+      "Deaths": 4,
+      "SoloKill": 0,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 16,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 0,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 0,
+      "MinionDamage": 36690,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 0,
+      "WinsWarrior": 0,
+      "TeamLevel": 15,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 7627,
+      "OutnumberedDeaths": 2,
+      "Assists": 1,
+      "Healing": 19429,
+      "PlaysAssassin": 1,
+      "TimeRootingEnemyHeroes": 23,
+      "killCountBuildings": 0,
+      "WinsMale": 0,
+      "StructureDamage": 0,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 36894,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 470,
+      "WinsAssassin": 0,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 36,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 0,
+    "isHuman": true,
+    "id": 3
+  },
+  "4": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroWhitemane",
+    "name": "Whitemane",
+    "mapStats": {},
+    "playerId": 4,
+    "unitTagIndex": 137,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 15,
+      "levelEvents": [
+        {
+          "seconds": 5,
+          "level": 1
+        },
+        {
+          "seconds": 99,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 158,
+          "level": 4
+        },
+        {
+          "seconds": 180,
+          "level": 5
+        },
+        {
+          "seconds": 201,
+          "level": 6
+        },
+        {
+          "seconds": 283,
+          "level": 7
+        },
+        {
+          "seconds": 325,
+          "level": 8
+        },
+        {
+          "seconds": 362,
+          "level": 9
+        },
+        {
+          "seconds": 399,
+          "level": 10
+        },
+        {
+          "seconds": 440,
+          "level": 11
+        },
+        {
+          "seconds": 541,
+          "level": 12
+        },
+        {
+          "seconds": 609,
+          "level": 13
+        },
+        {
+          "seconds": 696,
+          "level": 14
+        },
+        {
+          "seconds": 799,
+          "level": 15
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 94,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 1,
+      "TimeCCdEnemyHeroes": 413,
+      "PlaysSupport": 1,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 0,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 6612,
+      "killCountMinions": 5,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 0,
+      "totalOutDmg": 28335,
+      "WinsWarcraft": 0,
+      "WinsDiablo": 0,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 0,
+      "fortsDestroyed": 0,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 0,
+      "TeamTakedowns": 0,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [
+        {
+          "seconds": 483,
+          "gameloops": 7737,
+          "y": 135,
+          "killers": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "soloDeath": false,
+          "x": 111
+        },
+        {
+          "seconds": 658,
+          "gameloops": 10530,
+          "y": 99,
+          "killers": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "soloDeath": false,
+          "x": 84
+        },
+        {
+          "seconds": 768,
+          "gameloops": 12302,
+          "y": 124,
+          "killers": [
+            6,
+            7,
+            8,
+            10
+          ],
+          "soloDeath": false,
+          "x": 37
+        }
+      ],
+      "deathCount": 3,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 2351,
+      "DamageTaken": 19889,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 1,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 45163,
+      "secondsDead": 94,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 0,
+      "TeamfightDamageTaken": 12294,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 2,
+      "soloDeathsCount": 0,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 0,
+      "pickedTalents": [
+        {
+          "seconds": 19,
+          "talent_name": "WhitemaneInquisitionClemency"
+        },
+        {
+          "seconds": 162,
+          "talent_name": "WhitemaneSearingLashIndulgence"
+        },
+        {
+          "seconds": 306,
+          "talent_name": "WhitemaneFanaticalPower"
+        },
+        {
+          "seconds": 401,
+          "talent_name": "WhitemaneScarletAegis"
+        },
+        {
+          "seconds": 623,
+          "talent_name": "WhitemaneSearingLashHarshDiscipline"
+        }
+      ],
+      "EscapesPerformed": 1,
+      "MercCampCaptures": 2,
+      "HighestKillStreak": 4,
+      "TeamfightHeroDamage": 9092,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 12519,
+      "OnFireTimeOnFire": 0,
+      "Takedowns": 4,
+      "PlaysStarCraft": 0,
+      "Deaths": 3,
+      "SoloKill": 0,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 1,
+      "regenGlobesTaken": 13,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 0,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 12515,
+      "MinionDamage": 4180,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 0,
+      "WinsWarrior": 0,
+      "TeamLevel": 15,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 4633,
+      "OutnumberedDeaths": 2,
+      "Assists": 4,
+      "Healing": 41477,
+      "PlaysAssassin": 0,
+      "TimeRootingEnemyHeroes": 3,
+      "killCountBuildings": 0,
+      "WinsMale": 0,
+      "StructureDamage": 81,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 12809,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 2592,
+      "WinsAssassin": 0,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 5,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 0,
+    "isHuman": true,
+    "id": 4
+  },
+  "5": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroDeckard",
+    "name": "Deckard",
+    "mapStats": {},
+    "playerId": 5,
+    "unitTagIndex": 129,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 18,
+      "levelEvents": [
+        {
+          "seconds": 3,
+          "level": 1
+        },
+        {
+          "seconds": 97,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 156,
+          "level": 4
+        },
+        {
+          "seconds": 181,
+          "level": 5
+        },
+        {
+          "seconds": 205,
+          "level": 6
+        },
+        {
+          "seconds": 255,
+          "level": 7
+        },
+        {
+          "seconds": 286,
+          "level": 8
+        },
+        {
+          "seconds": 324,
+          "level": 9
+        },
+        {
+          "seconds": 361,
+          "level": 10
+        },
+        {
+          "seconds": 396,
+          "level": 11
+        },
+        {
+          "seconds": 445,
+          "level": 12
+        },
+        {
+          "seconds": 498,
+          "level": 13
+        },
+        {
+          "seconds": 528,
+          "level": 14
+        },
+        {
+          "seconds": 582,
+          "level": 15
+        },
+        {
+          "seconds": 636,
+          "level": 16
+        },
+        {
+          "seconds": 687,
+          "level": 17
+        },
+        {
+          "seconds": 747,
+          "level": 18
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 26,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 0,
+      "TimeCCdEnemyHeroes": 185,
+      "PlaysSupport": 1,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 59,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 18035,
+      "killCountMinions": 5,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 1,
+      "totalOutDmg": 54808,
+      "WinsWarcraft": 0,
+      "WinsDiablo": 1,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 1,
+      "fortsDestroyed": 1,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 1,
+      "TeamTakedowns": 4,
+      "WinsSupport": 1,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [
+        {
+          "seconds": 399,
+          "gameloops": 6385,
+          "y": 80,
+          "killers": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "soloDeath": false,
+          "x": 143
+        }
+      ],
+      "deathCount": 1,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 1830,
+      "DamageTaken": 30501,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 0,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 65038,
+      "secondsDead": 26,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 1,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 12531,
+      "TeamfightDamageTaken": 21506,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 2,
+      "soloDeathsCount": 0,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 0,
+      "pickedTalents": [
+        {
+          "seconds": 40,
+          "talent_name": "DeckardGemSapphire"
+        },
+        {
+          "seconds": 165,
+          "talent_name": "DeckardPotionOfShielding"
+        },
+        {
+          "seconds": 264,
+          "talent_name": "DeckardKanaisCube"
+        },
+        {
+          "seconds": 365,
+          "talent_name": "DeckardStayAWhileAndListen"
+        },
+        {
+          "seconds": 501,
+          "talent_name": "DeckardAncientBlessings"
+        },
+        {
+          "seconds": 641,
+          "talent_name": "DeckardScrollOfStoneCurse"
+        }
+      ],
+      "EscapesPerformed": 1,
+      "MercCampCaptures": 3,
+      "HighestKillStreak": 14,
+      "TeamfightHeroDamage": 10660,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 16388,
+      "OnFireTimeOnFire": 0,
+      "Takedowns": 20,
+      "PlaysStarCraft": 0,
+      "Deaths": 1,
+      "SoloKill": 2,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 31,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 0,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 3254,
+      "MinionDamage": 9624,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 1,
+      "WinsWarrior": 0,
+      "TeamLevel": 18,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 7754,
+      "OutnumberedDeaths": 0,
+      "Assists": 18,
+      "Healing": 54272,
+      "PlaysAssassin": 0,
+      "TimeRootingEnemyHeroes": 39,
+      "killCountBuildings": 1,
+      "WinsMale": 1,
+      "StructureDamage": 6581,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 28040,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 2350,
+      "WinsAssassin": 0,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 8061,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 6,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 1,
+    "isHuman": true,
+    "id": 5
+  },
+  "6": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroMuradin",
+    "name": "Muradin",
+    "mapStats": {},
+    "playerId": 6,
+    "unitTagIndex": 130,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 18,
+      "levelEvents": [
+        {
+          "seconds": 3,
+          "level": 1
+        },
+        {
+          "seconds": 97,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 156,
+          "level": 4
+        },
+        {
+          "seconds": 181,
+          "level": 5
+        },
+        {
+          "seconds": 205,
+          "level": 6
+        },
+        {
+          "seconds": 255,
+          "level": 7
+        },
+        {
+          "seconds": 286,
+          "level": 8
+        },
+        {
+          "seconds": 324,
+          "level": 9
+        },
+        {
+          "seconds": 361,
+          "level": 10
+        },
+        {
+          "seconds": 396,
+          "level": 11
+        },
+        {
+          "seconds": 445,
+          "level": 12
+        },
+        {
+          "seconds": 498,
+          "level": 13
+        },
+        {
+          "seconds": 528,
+          "level": 14
+        },
+        {
+          "seconds": 582,
+          "level": 15
+        },
+        {
+          "seconds": 636,
+          "level": 16
+        },
+        {
+          "seconds": 687,
+          "level": 17
+        },
+        {
+          "seconds": 747,
+          "level": 18
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 0,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 0,
+      "TimeCCdEnemyHeroes": 127,
+      "PlaysSupport": 0,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 20,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 31707,
+      "killCountMinions": 17,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 1,
+      "totalOutDmg": 93089,
+      "WinsWarcraft": 1,
+      "WinsDiablo": 0,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 0,
+      "voteGivenTo": 9,
+      "fortsDestroyed": 0,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 1,
+      "TeamTakedowns": 0,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 1,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [],
+      "deathCount": 0,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 1854,
+      "DamageTaken": 59600,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 1,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 65038,
+      "secondsDead": 0,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 20402,
+      "TeamfightDamageTaken": 47188,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 0,
+      "soloDeathsCount": 0,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 1,
+      "pickedTalents": [
+        {
+          "seconds": 8,
+          "talent_name": "MuradinStormboltPerfectStorm"
+        },
+        {
+          "seconds": 161,
+          "talent_name": "MuradinMasteryThunderburn"
+        },
+        {
+          "seconds": 260,
+          "talent_name": "MuradinGiveEmTheAxeExecutioner60DamageBonus"
+        },
+        {
+          "seconds": 365,
+          "talent_name": "MuradinHeroicAbilityAvatar"
+        },
+        {
+          "seconds": 513,
+          "talent_name": "MuradinMasteryThunderclapHealingStatic"
+        },
+        {
+          "seconds": 641,
+          "talent_name": "MuradinMasteryPassiveStoneform"
+        }
+      ],
+      "EscapesPerformed": 3,
+      "MercCampCaptures": 4,
+      "HighestKillStreak": 19,
+      "TeamfightHeroDamage": 20217,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 22357,
+      "OnFireTimeOnFire": 9,
+      "Takedowns": 19,
+      "PlaysStarCraft": 0,
+      "Deaths": 0,
+      "SoloKill": 3,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 30,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 0,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 0,
+      "MinionDamage": 22416,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 0,
+      "WinsWarrior": 1,
+      "TeamLevel": 18,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 8806,
+      "OutnumberedDeaths": 0,
+      "Assists": 16,
+      "Healing": 0,
+      "PlaysAssassin": 0,
+      "TimeRootingEnemyHeroes": 0,
+      "killCountBuildings": 1,
+      "WinsMale": 1,
+      "StructureDamage": 7437,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 59600,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 7318,
+      "WinsAssassin": 0,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 18,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 1,
+    "isHuman": true,
+    "id": 6
+  },
+  "7": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroZagara",
+    "name": "Zagara",
+    "mapStats": {},
+    "playerId": 7,
+    "unitTagIndex": 132,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [
+        8
+      ],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 18,
+      "levelEvents": [
+        {
+          "seconds": 4,
+          "level": 1
+        },
+        {
+          "seconds": 97,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 156,
+          "level": 4
+        },
+        {
+          "seconds": 181,
+          "level": 5
+        },
+        {
+          "seconds": 205,
+          "level": 6
+        },
+        {
+          "seconds": 255,
+          "level": 7
+        },
+        {
+          "seconds": 286,
+          "level": 8
+        },
+        {
+          "seconds": 324,
+          "level": 9
+        },
+        {
+          "seconds": 361,
+          "level": 10
+        },
+        {
+          "seconds": 396,
+          "level": 11
+        },
+        {
+          "seconds": 445,
+          "level": 12
+        },
+        {
+          "seconds": 498,
+          "level": 13
+        },
+        {
+          "seconds": 528,
+          "level": 14
+        },
+        {
+          "seconds": 582,
+          "level": 15
+        },
+        {
+          "seconds": 636,
+          "level": 16
+        },
+        {
+          "seconds": 687,
+          "level": 17
+        },
+        {
+          "seconds": 747,
+          "level": 18
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 0,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 1,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 1,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 1,
+      "TimeCCdEnemyHeroes": 60,
+      "PlaysSupport": 0,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 30,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 54002,
+      "killCountMinions": 33,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 1,
+      "TeamfightEscapesPerformed": 0,
+      "totalOutDmg": 162154,
+      "WinsWarcraft": 0,
+      "WinsDiablo": 0,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 0,
+      "fortsDestroyed": 1,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 0,
+      "TeamTakedowns": 0,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [],
+      "deathCount": 0,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 4494,
+      "DamageTaken": 14999,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 0,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 65038,
+      "secondsDead": 0,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 2796,
+      "TeamfightDamageTaken": 3934,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 0,
+      "soloDeathsCount": 0,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 0,
+      "pickedTalents": [
+        {
+          "seconds": 14,
+          "talent_name": "ZagaraMasteryCorpseFeeders"
+        },
+        {
+          "seconds": 159,
+          "talent_name": "ZagaraMasterySerratedSpines"
+        },
+        {
+          "seconds": 260,
+          "talent_name": "ZagaraMasteryBileDrop"
+        },
+        {
+          "seconds": 366,
+          "talent_name": "ZagaraHeroicAbilityDevouringMaw"
+        },
+        {
+          "seconds": 505,
+          "talent_name": "ZagaraMasteryHydraliskTransfusion"
+        },
+        {
+          "seconds": 641,
+          "talent_name": "ZagaraMasteryCorrosiveSaliva"
+        }
+      ],
+      "EscapesPerformed": 1,
+      "MercCampCaptures": 1,
+      "HighestKillStreak": 18,
+      "TeamfightHeroDamage": 14516,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 41632,
+      "OnFireTimeOnFire": 189,
+      "Takedowns": 18,
+      "PlaysStarCraft": 1,
+      "Deaths": 0,
+      "SoloKill": 5,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 21,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 1,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 0,
+      "MinionDamage": 28756,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 0,
+      "WinsWarrior": 0,
+      "TeamLevel": 18,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 9794,
+      "OutnumberedDeaths": 0,
+      "Assists": 13,
+      "Healing": 0,
+      "PlaysAssassin": 0,
+      "TimeRootingEnemyHeroes": 0,
+      "killCountBuildings": 0,
+      "WinsMale": 0,
+      "StructureDamage": 20752,
+      "EndOfMatchAwardMVPBoolean": 1,
+      "DamageSoaked": 14999,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 12518,
+      "WinsAssassin": 0,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 33,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 1,
+    "isHuman": true,
+    "id": 7
+  },
+  "8": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroDryad",
+    "name": "Lunara",
+    "mapStats": {},
+    "playerId": 8,
+    "unitTagIndex": 134,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 18,
+      "levelEvents": [
+        {
+          "seconds": 4,
+          "level": 1
+        },
+        {
+          "seconds": 97,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 156,
+          "level": 4
+        },
+        {
+          "seconds": 181,
+          "level": 5
+        },
+        {
+          "seconds": 205,
+          "level": 6
+        },
+        {
+          "seconds": 255,
+          "level": 7
+        },
+        {
+          "seconds": 286,
+          "level": 8
+        },
+        {
+          "seconds": 324,
+          "level": 9
+        },
+        {
+          "seconds": 361,
+          "level": 10
+        },
+        {
+          "seconds": 396,
+          "level": 11
+        },
+        {
+          "seconds": 445,
+          "level": 12
+        },
+        {
+          "seconds": 498,
+          "level": 13
+        },
+        {
+          "seconds": 528,
+          "level": 14
+        },
+        {
+          "seconds": 582,
+          "level": 15
+        },
+        {
+          "seconds": 636,
+          "level": 16
+        },
+        {
+          "seconds": 687,
+          "level": 17
+        },
+        {
+          "seconds": 747,
+          "level": 18
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "wispsPlaced": 9,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 49,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 1,
+      "TimeCCdEnemyHeroes": 168,
+      "PlaysSupport": 0,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 0,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 56755,
+      "killCountMinions": 45,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 0,
+      "totalOutDmg": 170488,
+      "WinsWarcraft": 1,
+      "WinsDiablo": 0,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 2,
+      "voteGivenTo": 7,
+      "fortsDestroyed": 1,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 0,
+      "TeamTakedowns": 0,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [
+        {
+          "seconds": 359,
+          "gameloops": 5752,
+          "y": 110,
+          "killers": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "soloDeath": true,
+          "x": 129
+        },
+        {
+          "seconds": 427,
+          "gameloops": 6843,
+          "y": 88,
+          "killers": [
+            2,
+            3,
+            5
+          ],
+          "soloDeath": true,
+          "x": 114
+        }
+      ],
+      "deathCount": 2,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 2394,
+      "DamageTaken": 21333,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 1,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 0,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 65038,
+      "secondsDead": 49,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 0,
+      "TeamfightDamageTaken": 10571,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 0,
+      "soloDeathsCount": 2,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 0,
+      "pickedTalents": [
+        {
+          "seconds": 46,
+          "talent_name": "DryadSentinelWisp"
+        },
+        {
+          "seconds": 162,
+          "talent_name": "DryadNaturesCulling"
+        },
+        {
+          "seconds": 289,
+          "talent_name": "DryadSplinteredSpear"
+        },
+        {
+          "seconds": 368,
+          "talent_name": "DryadHeroicAbilityThornwoodVine"
+        },
+        {
+          "seconds": 512,
+          "talent_name": "DryadLetThemWither"
+        },
+        {
+          "seconds": 654,
+          "talent_name": "DryadUnfairAdvantage"
+        }
+      ],
+      "EscapesPerformed": 0,
+      "MercCampCaptures": 2,
+      "HighestKillStreak": 10,
+      "TeamfightHeroDamage": 22724,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 40784,
+      "OnFireTimeOnFire": 177,
+      "Takedowns": 15,
+      "PlaysStarCraft": 0,
+      "Deaths": 2,
+      "SoloKill": 5,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 30,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 1,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 0,
+      "MinionDamage": 45634,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 0,
+      "WinsWarrior": 0,
+      "TeamLevel": 18,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 9002,
+      "OutnumberedDeaths": 0,
+      "Assists": 10,
+      "Healing": 0,
+      "PlaysAssassin": 1,
+      "TimeRootingEnemyHeroes": 0,
+      "killCountBuildings": 3,
+      "WinsMale": 0,
+      "StructureDamage": 8727,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 17095,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 16194,
+      "WinsAssassin": 1,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 48,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 1,
+    "isHuman": true,
+    "id": 8
+  },
+  "9": {
+    "py/object": "models.HeroUnit",
+    "internalName": "HeroAmazon",
+    "name": "Cassia",
+    "mapStats": {},
+    "playerId": 9,
+    "unitTagIndex": 136,
+    "unitTagRecycle": 1,
+    "generalStats": {
+      "LunarNewYearSuccesfulArtifactTurnIns": 0,
+      "TeamWinsStarCraft": 0,
+      "TimeOnPoint": 0,
+      "EndOfMatchAwardMostCurseDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostCoinsPaidBoolean": 0,
+      "Role": 0,
+      "EndOfMatchAwardHighestKillStreakBoolean": 0,
+      "EndOfMatchAwardMostMercCampsCapturedBoolean": 0,
+      "CageUnlocksInterrupted": 0,
+      "EndOfMatchAwardMapSpecificBoolean": 0,
+      "LunarNewYearEventCompleted": 0,
+      "votesReceivedBy": [
+        6
+      ],
+      "EndOfMatchAwardMostDamageDoneToZergBoolean": 0,
+      "TeamWinsDiablo": 0,
+      "Level": 18,
+      "levelEvents": [
+        {
+          "seconds": 5,
+          "level": 1
+        },
+        {
+          "seconds": 97,
+          "level": 2
+        },
+        {
+          "seconds": 127,
+          "level": 3
+        },
+        {
+          "seconds": 156,
+          "level": 4
+        },
+        {
+          "seconds": 181,
+          "level": 5
+        },
+        {
+          "seconds": 205,
+          "level": 6
+        },
+        {
+          "seconds": 255,
+          "level": 7
+        },
+        {
+          "seconds": 286,
+          "level": 8
+        },
+        {
+          "seconds": 324,
+          "level": 9
+        },
+        {
+          "seconds": 361,
+          "level": 10
+        },
+        {
+          "seconds": 396,
+          "level": 11
+        },
+        {
+          "seconds": 445,
+          "level": 12
+        },
+        {
+          "seconds": 498,
+          "level": 13
+        },
+        {
+          "seconds": 528,
+          "level": 14
+        },
+        {
+          "seconds": 582,
+          "level": 15
+        },
+        {
+          "seconds": 636,
+          "level": 16
+        },
+        {
+          "seconds": 687,
+          "level": 17
+        },
+        {
+          "seconds": 747,
+          "level": 18
+        }
+      ],
+      "LunarNewYearRoosterEventCompleted": 0,
+      "EndOfMatchAwardMostSilencesBoolean": 0,
+      "TimeSpentDead": 29,
+      "EndOfMatchAwardMostEscapesBoolean": 0,
+      "EndOfMatchAwardMostVengeancesPerformedBoolean": 0,
+      "PlaysSpecialist": 0,
+      "EndOfMatchAwardMostGemsTurnedInBoolean": 0,
+      "StarcraftPiecesCollected": 0,
+      "EndOfMatchAward0OutnumberedDeathsBoolean": 0,
+      "WinsStarCraft": 0,
+      "TeamWinsFemale": 0,
+      "EndOfMatchAwardMostImmortalDamageBoolean": 0,
+      "EndOfMatchAwardMostSiegeDamageDoneBoolean": 0,
+      "EndOfMatchAwardMostStunsBoolean": 0,
+      "PlaysFemale": 1,
+      "TimeCCdEnemyHeroes": 22,
+      "PlaysSupport": 0,
+      "EndOfMatchAwardMostDragonShrinesCapturedBoolean": 0,
+      "TimeStunningEnemyHeroes": 0,
+      "EndOfMatchAwardMostDamageToPlantsBoolean": 0,
+      "SiegeDamage": 58444,
+      "killCountMinions": 45,
+      "EndOfMatchAwardMostDamageToMinionsBoolean": 0,
+      "EndOfMatchAwardMostDamageTakenBoolean": 0,
+      "WinsSpecialist": 0,
+      "TeamfightEscapesPerformed": 0,
+      "totalOutDmg": 177347,
+      "WinsWarcraft": 0,
+      "WinsDiablo": 1,
+      "EndOfMatchAwardMostSkullsCollectedBoolean": 0,
+      "VengeancesPerformed": 0,
+      "fortsDestroyed": 1,
+      "EndOfMatchAwardMostKillsBoolean": 0,
+      "PlaysMale": 0,
+      "TeamTakedowns": 0,
+      "WinsSupport": 0,
+      "TeamWinsWarcraft": 0,
+      "EndOfMatchAwardMostTeamfightDamageTakenBoolean": 0,
+      "EndOfMatchAwardMostTeamfightHealingDoneBoolean": 0,
+      "deaths": [
+        {
+          "seconds": 469,
+          "gameloops": 7518,
+          "y": 135,
+          "killers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "soloDeath": false,
+          "x": 111
+        }
+      ],
+      "deathCount": 1,
+      "EndOfMatchAwardMostNukeDamageDoneBoolean": 0,
+      "SummonDamage": 2485,
+      "DamageTaken": 29659,
+      "PachimariMania": 0,
+      "EndOfMatchAwardMostInterruptedCageUnlocksBoolean": 0,
+      "PlaysWarCraft": 0,
+      "EndOfMatchAwardMostTeamfightHeroDamageDoneBoolean": 1,
+      "PlaysOverwatch": 0,
+      "EndOfMatchAwardMostHeroDamageDoneBoolean": 0,
+      "MetaExperience": 65038,
+      "secondsDead": 29,
+      "GameScore": 0,
+      "TownKills": 0,
+      "EndOfMatchAwardMostRootsBoolean": 0,
+      "StarcraftDailyEventCompleted": 0,
+      "SelfHealing": 6021,
+      "TeamfightDamageTaken": 16874,
+      "WatchTowerCaptures": 0,
+      "ClutchHealsPerformed": 0,
+      "soloDeathsCount": 0,
+      "TimeOnPayload": 0,
+      "EndOfMatchAwardMostProtectionBoolean": 0,
+      "TouchByBlightPlague": 0,
+      "PlaysWarrior": 0,
+      "pickedTalents": [
+        {
+          "seconds": 43,
+          "talent_name": "AmazonSeraphsHymn"
+        },
+        {
+          "seconds": 165,
+          "talent_name": "AmazonRingoftheLeech"
+        },
+        {
+          "seconds": 265,
+          "talent_name": "AmazonWarTraveler"
+        },
+        {
+          "seconds": 365,
+          "talent_name": "AmazonBallLightning"
+        },
+        {
+          "seconds": 530,
+          "talent_name": "AmazonGroundingBolt"
+        },
+        {
+          "seconds": 668,
+          "talent_name": "AmazonPenetrate"
+        }
+      ],
+      "EscapesPerformed": 0,
+      "MercCampCaptures": 3,
+      "HighestKillStreak": 10,
+      "TeamfightHeroDamage": 31843,
+      "EndOfMatchAwardMostTimeOnPointBoolean": 0,
+      "EndOfMatchAwardMostTimeInTempleBoolean": 0,
+      "EndOfMatchAwardMostTimePushingBoolean": 0,
+      "HeroDamage": 46799,
+      "OnFireTimeOnFire": 57,
+      "Takedowns": 17,
+      "PlaysStarCraft": 0,
+      "Deaths": 1,
+      "SoloKill": 6,
+      "castedAbilities": {
+        "py/reduce": [
+          {
+            "py/type": "collections.OrderedDict"
+          },
+          {
+            "py/tuple": [
+              []
+            ]
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "EndOfMatchAwardClutchHealerBoolean": 0,
+      "regenGlobesTaken": 27,
+      "EndOfMatchAwardHatTrickBoolean": 0,
+      "WinsFemale": 1,
+      "EndOfMatchAwardMostHealingBoolean": 0,
+      "KilledTreasureGoblin": 0,
+      "EndOfMatchAwardMostAltarDamageDone": 0,
+      "TeamfightHealingDone": 0,
+      "MinionDamage": 38259,
+      "killCountNeutral": 0,
+      "PlaysDiablo": 1,
+      "WinsWarrior": 0,
+      "TeamLevel": 18,
+      "TimeSilencingEnemyHeroes": 0,
+      "ExperienceContribution": 9182,
+      "OutnumberedDeaths": 1,
+      "Assists": 11,
+      "Healing": 0,
+      "PlaysAssassin": 1,
+      "TimeRootingEnemyHeroes": 0,
+      "killCountBuildings": 0,
+      "WinsMale": 0,
+      "StructureDamage": 17700,
+      "EndOfMatchAwardMVPBoolean": 0,
+      "DamageSoaked": 26712,
+      "EndOfMatchAward0DeathsBoolean": 0,
+      "CreepDamage": 13660,
+      "WinsAssassin": 1,
+      "MinesSkullsCollected": 0,
+      "ProtectionGivenToAllies": 0,
+      "EndOfMatchAwardGivenToNonwinner": 0,
+      "killCount": 45,
+      "EndOfMatchAwardMostDaredevilEscapesBoolean": 0,
+      "EndOfMatchAwardMostXPContributionBoolean": 0,
+      "TeamWinsMale": 0
+    },
+    "team": 1,
+    "isHuman": true,
+    "id": 9
+  }
+}

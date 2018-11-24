@@ -1,0 +1,512 @@
+[
+  {
+    "seconds": 3,
+    "team": 1,
+    "event": "levelUp",
+    "level": 1
+  },
+  {
+    "seconds": 3,
+    "team": 0,
+    "event": "levelUp",
+    "level": 1
+  },
+  {
+    "seconds": 80,
+    "soloDeath": true,
+    "unitName": "Raynor",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 97,
+    "team": 1,
+    "event": "levelUp",
+    "level": 2
+  },
+  {
+    "seconds": 99,
+    "team": 0,
+    "event": "levelUp",
+    "level": 2
+  },
+  {
+    "seconds": 110,
+    "soloDeath": false,
+    "unitName": "Varian",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 127,
+    "team": 0,
+    "event": "levelUp",
+    "level": 3
+  },
+  {
+    "seconds": 127,
+    "team": 1,
+    "event": "levelUp",
+    "level": 3
+  },
+  {
+    "seconds": 156,
+    "team": 1,
+    "event": "levelUp",
+    "level": 4
+  },
+  {
+    "seconds": 158,
+    "team": 0,
+    "event": "levelUp",
+    "level": 4
+  },
+  {
+    "seconds": 166,
+    "event": "siegeCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 180,
+    "event": "bruiserCampTaken",
+    "team": 0
+  },
+  {
+    "seconds": 180,
+    "team": 0,
+    "event": "levelUp",
+    "level": 5
+  },
+  {
+    "seconds": 181,
+    "team": 1,
+    "event": "levelUp",
+    "level": 5
+  },
+  {
+    "seconds": 201,
+    "team": 0,
+    "event": "levelUp",
+    "level": 6
+  },
+  {
+    "seconds": 205,
+    "event": "bruiserCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 205,
+    "team": 1,
+    "event": "levelUp",
+    "level": 6
+  },
+  {
+    "seconds": 232,
+    "event": "siegeCampTaken",
+    "team": 0
+  },
+  {
+    "seconds": 237,
+    "soloDeath": true,
+    "unitName": "Varian",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 255,
+    "team": 1,
+    "event": "levelUp",
+    "level": 7
+  },
+  {
+    "seconds": 267,
+    "soloDeath": false,
+    "unitName": "Raynor",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 271,
+    "soloDeath": false,
+    "unitName": "Tychus",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 271,
+    "unitName": "TownCannonTowerL2",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 267,
+    "unitName": "TownCannonTowerL2",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 283,
+    "team": 0,
+    "event": "levelUp",
+    "level": 7
+  },
+  {
+    "seconds": 286,
+    "team": 1,
+    "event": "levelUp",
+    "level": 8
+  },
+  {
+    "seconds": 298,
+    "event": "bruiserCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 322,
+    "event": "siegeCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 324,
+    "team": 1,
+    "event": "levelUp",
+    "level": 9
+  },
+  {
+    "seconds": 325,
+    "event": "bruiserCampTaken",
+    "team": 0
+  },
+  {
+    "seconds": 325,
+    "team": 0,
+    "event": "levelUp",
+    "level": 8
+  },
+  {
+    "seconds": 359,
+    "soloDeath": true,
+    "unitName": "Lunara",
+    "event": "heroDeath",
+    "team": 1
+  },
+  {
+    "seconds": 361,
+    "team": 1,
+    "event": "levelUp",
+    "level": 10
+  },
+  {
+    "seconds": 362,
+    "team": 0,
+    "event": "levelUp",
+    "level": 9
+  },
+  {
+    "seconds": 388,
+    "event": "bruiserCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 389,
+    "unitName": "TownCannonTowerL2",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 396,
+    "soloDeath": false,
+    "unitName": "Tychus",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 396,
+    "team": 1,
+    "event": "levelUp",
+    "level": 11
+  },
+  {
+    "seconds": 399,
+    "soloDeath": false,
+    "unitName": "Deckard",
+    "event": "heroDeath",
+    "team": 1
+  },
+  {
+    "seconds": 399,
+    "team": 0,
+    "event": "levelUp",
+    "level": 10
+  },
+  {
+    "seconds": 410,
+    "soloDeath": false,
+    "unitName": "Thrall",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 427,
+    "soloDeath": true,
+    "unitName": "Lunara",
+    "event": "heroDeath",
+    "team": 1
+  },
+  {
+    "seconds": 440,
+    "team": 0,
+    "event": "levelUp",
+    "level": 11
+  },
+  {
+    "seconds": 441,
+    "event": "siegeCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 445,
+    "team": 1,
+    "event": "levelUp",
+    "level": 12
+  },
+  {
+    "seconds": 462,
+    "soloDeath": false,
+    "unitName": "Thrall",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 469,
+    "soloDeath": false,
+    "unitName": "Cassia",
+    "event": "heroDeath",
+    "team": 1
+  },
+  {
+    "seconds": 475,
+    "soloDeath": false,
+    "unitName": "Raynor",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 478,
+    "soloDeath": false,
+    "unitName": "Varian",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 483,
+    "soloDeath": false,
+    "unitName": "Whitemane",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 498,
+    "event": "siegeCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 498,
+    "team": 1,
+    "event": "levelUp",
+    "level": 13
+  },
+  {
+    "seconds": 501,
+    "unitName": "TownCannonTowerL2",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 514,
+    "unitName": "TownTownHallL2",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 528,
+    "event": "siegeCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 528,
+    "team": 1,
+    "event": "levelUp",
+    "level": 14
+  },
+  {
+    "seconds": 537,
+    "soloDeath": false,
+    "unitName": "Raynor",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 541,
+    "team": 0,
+    "event": "levelUp",
+    "level": 12
+  },
+  {
+    "seconds": 563,
+    "soloDeath": false,
+    "unitName": "Varian",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 582,
+    "team": 1,
+    "event": "levelUp",
+    "level": 15
+  },
+  {
+    "seconds": 583,
+    "unitName": "TownTownHallL2",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 580,
+    "unitName": "TownCannonTowerL3",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 598,
+    "unitName": "TownCannonTowerL3",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 603,
+    "event": "siegeCampTaken",
+    "team": 1
+  },
+  {
+    "seconds": 609,
+    "team": 0,
+    "event": "levelUp",
+    "level": 13
+  },
+  {
+    "seconds": 617,
+    "event": "siegeCampTaken",
+    "team": 0
+  },
+  {
+    "seconds": 636,
+    "team": 1,
+    "event": "levelUp",
+    "level": 16
+  },
+  {
+    "seconds": 646,
+    "soloDeath": false,
+    "unitName": "Raynor",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 658,
+    "soloDeath": false,
+    "unitName": "Whitemane",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 658,
+    "soloDeath": false,
+    "unitName": "Varian",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 677,
+    "unitName": "TownCannonTowerL3",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 687,
+    "team": 1,
+    "event": "levelUp",
+    "level": 17
+  },
+  {
+    "seconds": 687,
+    "unitName": "TownCannonTowerL3",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 696,
+    "team": 0,
+    "event": "levelUp",
+    "level": 14
+  },
+  {
+    "seconds": 699,
+    "soloDeath": false,
+    "unitName": "Thrall",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 747,
+    "unitName": "TownTownHallL3",
+    "event": "buildingDestroyed",
+    "team": 0
+  },
+  {
+    "seconds": 747,
+    "team": 1,
+    "event": "levelUp",
+    "level": 18
+  },
+  {
+    "seconds": 760,
+    "soloDeath": false,
+    "unitName": "Raynor",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 761,
+    "soloDeath": false,
+    "unitName": "Varian",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 768,
+    "soloDeath": false,
+    "unitName": "Whitemane",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 774,
+    "soloDeath": false,
+    "unitName": "Thrall",
+    "event": "heroDeath",
+    "team": 0
+  },
+  {
+    "seconds": 799,
+    "team": 0,
+    "event": "levelUp",
+    "level": 15
+  },
+  {
+    "seconds": 807,
+    "unitName": "KingsCore",
+    "event": "buildingDestroyed",
+    "team": 0
+  }
+]

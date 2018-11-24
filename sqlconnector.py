@@ -50,7 +50,7 @@ createTableCommand = (
 "    `enemyHero5` CHAR(20),"
 "   PRIMARY KEY (`game_id`)) ENGINE=InnoDB")
 
-add_game = ("INSERT INTO {} "
+add_game = ("INSERT INTO `{}` "
             "(result, playerHero, playerTakedowns,"
             "playerDeaths, playerHeroDamage, playerHealing, playerSiegeDamage, playerStructureDamage,"
             "playerMinionDamage, playerSelfHealing, playerDamageTaken,"
@@ -118,6 +118,7 @@ class GameSQLConnector:
 
     def addHeroData(self, game_data, playerDatabaseID):
         self.createTable(playerDatabaseID)
+        print(game_data)
         self.cursor.execute(add_game.format(playerDatabaseID), game_data)
         gameId = self.cursor.lastrowid
         self.conn.commit()
@@ -165,13 +166,22 @@ class GameSQLConnector:
         self.cursor.execute(addEnemyHeroesStatement)
         self.conn.commit()
 
-    def queryData(self, playerDatabaseID, item):
-        someStatement = "SELECT AVG(playerHeroDamage) 'avgPlayerHeroDamage' FROM heroes.p_midreadias_67731;"
+    def queryDataAverage(self, playerDatabaseID, item):
+        someStatement = "SELECT AVG({}}) 'avgPlayerHeroDamage' FROM heroes.p_midreadias_67731;".format(item)
         self.cursor.execute(someStatement)
 
         for (avgPlayerHeroDamage) in self.cursor:
             print("this player average hero damage is {}").format(avgPlayerHeroDamage)
             return avgPlayerHeroDamage
+
+    def queryDataAverageForHero(self, playerDatabaseID, item, hero):
+        someStatement = "SELECT AVG({}}) 'avgPlayerHeroDamage' FROM heroes.p_midreadias_67731 WHERE playerHero = {};".format(item, hero)
+        self.cursor.execute(someStatement)
+
+        for (avgPlayerHeroDamage) in self.cursor:
+            print("this player average hero damage is {}").format(avgPlayerHeroDamage)
+            return avgPlayerHeroDamage
+
 #         UPDATE customers
 # SET state = 'California',
 #     customer_rep = 32
