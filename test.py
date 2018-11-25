@@ -15,7 +15,7 @@ import protocol67985 as protocol
 commandLineArgs = sys.argv[1:]
 
 def addPlayerData(replay, playerBattleTag):
-    print(replay.replayInfo.startTime) # TODO: add start time to the database
+    print(str(replay.replayInfo))
     print(replay.players)
     players = replay.players
     player = findPlayer(replay, playerBattleTag) # Player object
@@ -33,13 +33,38 @@ def addPlayerData(replay, playerBattleTag):
                 heroPlayerStats['DamageSoaked'], heroPlayerStats['ExperienceContribution'])
     
     gameSQLConnector = GameSQLConnector()
-    gameSQLConnector.addHeroData(basicData, playerBattleTag)
+    entryid = gameSQLConnector.addHeroData(basicData, playerBattleTag)
+    gameSQLConnector.addAlliedHeroes(getTeam(replay, playerBattleTag, True), entryid, playerBattleTag)
+    gameSQLConnector.addEnemyHeroes(getTeam(replay, playerBattleTag, False), entryid, playerBattleTag)
+    gameSQLConnector.addTalentChoices(getTalentChoices(replay, playerSlot), entryid, playerBattleTag)
+    gameSQLConnector.addDateTime(replay.replayInfo.startTime, entryid, playerBattleTag)
+    gameSQLConnector.addMap(replay.replayInfo.mapName, entryid, playerBattleTag)
+    gameSQLConnector.addGameType(replay.replayInfo.gameType, entryid, playerBattleTag)
+    print("hi")
     
 def convertResult(gameResult):
     if gameResult == 1: # win condition
         return 1
     if gameResult == 2: # loss condition
         return 2
+
+def getTalentChoices(replay, playerSlot):
+    talents = []
+    for talent in replay.heroList[playerSlot].generalStats['pickedTalents']:
+        talents.append(talent['talent_name'][0:40])
+    return talents
+
+# consider using slot instead of player Battle Tag
+def getTeam(replay, playerBattleTag, getAllies):
+    player = findPlayer(replay, playerBattleTag)
+    teammateHeroes = []
+    for number in replay.players:
+        otherPlayer = replay.players[number]
+        if ((player.team == otherPlayer.team) == getAllies) and (player != otherPlayer):
+            teammateHeroes.append(otherPlayer.hero)
+    print(teammateHeroes)
+    return teammateHeroes
+    
                  
 def findPlayer(replay, playerBattleTag):
     for number in replay.players:

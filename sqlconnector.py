@@ -3,9 +3,8 @@ from mysql.connector import errorcode, Error
 from ConfigParser import ConfigParser
  
 DB_NAME = 'heroes'
-PLAYER_PREFIX = 'P_{}_{}'
 
-tableColumns = ['game_id', 'game_type', 'result', 'playerHero', 'playerTakedowns',
+tableColumns = ['gameID', 'game_type', 'result', 'playerHero', 'playerTakedowns',
     'playerDeaths', 'playerHeroDamage', 'playerHealing', 'playerSiegeDamage',
     'playerStructureDamage', 'playerMinionDamage', 'playerSelfHealing',
     'playerDamageTaken', 'playerDamageSoaked', 'playerExperience', 'map',
@@ -16,9 +15,11 @@ tableColumns = ['game_id', 'game_type', 'result', 'playerHero', 'playerTakedowns
 
 createTableCommand = (
 "CREATE TABLE `{}` ("
-"   `game_id` INT AUTO_INCREMENT,"
-"   `game_type` enum('HeroLeague', 'QuickPlay', 'TeamLeague', 'Other'),"
+"   `gameID` INT AUTO_INCREMENT,"
+"   `gameType` enum('Unranked', 'HeroLeague', 'TeamLeague', 'QuickMatch')," #will need to test these
+"   `gameTimeUTC` DATETIME,"
 "   `result` enum('W', 'L') NOT NULL,"
+"    `map` VARCHAR(15),"
 "   `playerHero` CHAR(20),"
 "   `playerTakedowns` SMALLINT UNSIGNED,"
 "    `playerDeaths` SMALLINT UNSIGNED,"
@@ -31,7 +32,6 @@ createTableCommand = (
 "    `playerDamageTaken` MEDIUMINT UNSIGNED,"
 "    `playerDamageSoaked` MEDIUMINT UNSIGNED,"
 "    `playerExperience` MEDIUMINT UNSIGNED,"
-"    `map` VARCHAR(15),"
 "    `talentChoice1` VARCHAR(40),"
 "    `talentChoice2` VARCHAR(40),"
 "    `talentChoice3` VARCHAR(40),"
@@ -48,16 +48,13 @@ createTableCommand = (
 "    `enemyHero3` CHAR(20),"
 "    `enemyHero4` CHAR(20),"
 "    `enemyHero5` CHAR(20),"
-"   PRIMARY KEY (`game_id`)) ENGINE=InnoDB")
+"   PRIMARY KEY (`gameID`)) ENGINE=InnoDB")
 
 add_game = ("INSERT INTO `{}` "
             "(result, playerHero, playerTakedowns,"
             "playerDeaths, playerHeroDamage, playerHealing, playerSiegeDamage, playerStructureDamage,"
             "playerMinionDamage, playerSelfHealing, playerDamageTaken,"
             "playerDamageSoaked, playerExperience) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
-
-def getPlayerDatabaseID(player_name, player_id):
-    return PLAYER_PREFIX.format(player_name, player_id)
 
 class GameSQLConnector:
 
@@ -123,46 +120,57 @@ class GameSQLConnector:
         gameId = self.cursor.lastrowid
         self.conn.commit()
         return gameId
-
-    def addMap(self, mapName, game_id, playerDatabaseID):
-        addMapStatement = ("UPDATE {}.{} SET map = '{}' WHERE game_id = {}").format(DB_NAME, playerDatabaseID, mapName, game_id)
-        self.cursor.execute(addMapStatement)
+    
+    def addDateTime(self, dateTime, gameID, playerDatabaseID):
+        addDateTimeStatement = ("UPDATE `{}` SET gameTimeUTC = '{}' WHERE gameID = {}").format(playerDatabaseID, dateTime, gameID)
+        self.cursor.execute(addDateTimeStatement)
         self.conn.commit()
 
-    def addTalentChoices(self, talents, game_id, playerDatabaseID):
+    def addMap(self, mapName, gameID, playerDatabaseID):
+        addMapStatement = ("UPDATE `{}` SET map = '{}' WHERE gameID = {}").format(playerDatabaseID, mapName, gameID)
+        self.cursor.execute(addMapStatement)
+        self.conn.commit()
+        
+    def addGameType(self, gameType, gameID, playerDatabaseID):
+        addGameTypeStatement = ("UPDATE `{}` SET gameType = '{}' WHERE gameID = {}").format(playerDatabaseID, gameType, gameID)
+        print(addGameTypeStatement)
+        self.cursor.execute(addGameTypeStatement)
+        self.conn.commit()
+
+    def addTalentChoices(self, talents, gameID, playerDatabaseID):
         if len(talents) == 0:
             return
-        baseStatement = ("UPDATE {}.{} SET ").format(DB_NAME, playerDatabaseID)
+        baseStatement = ("UPDATE `{}` SET ").format(playerDatabaseID)
         for i in range(0, len(talents)):
             baseStatement = baseStatement + " talentChoice{} = '{} '".format(i + 1, talents[i])
             if i != len(talents) - 1:
                 baseStatement = baseStatement + ","
-        baseStatement = baseStatement + " WHERE game_id = {}".format(game_id);
+        baseStatement = baseStatement + " WHERE gameID = {}".format(gameID);
         self.cursor.execute(baseStatement)
         self.conn.commit()
 
-    def addAlliedHeroes(self, allyArray, game_id, playerDatabaseID):
-        addAlliedHeroesStatement = ("UPDATE {}.{} "
+    def addAlliedHeroes(self, allyArray, gameID, playerDatabaseID):
+        addAlliedHeroesStatement = ("UPDATE `{}` "
             "SET alliedHero1 = '{}', "
             "alliedHero2 = '{}', "
             "alliedHero3 = '{}', "
             "alliedHero4 = '{}' "
-            "WHERE game_id = {}").format(DB_NAME, playerDatabaseID, allyArray[0], allyArray[1],
-            allyArray[2], allyArray[3], game_id)
+            "WHERE gameID = {}").format(playerDatabaseID, allyArray[0], allyArray[1],
+            allyArray[2], allyArray[3], gameID)
         #print(addAlliedHeroesStatement)
         self.cursor.execute(addAlliedHeroesStatement)
         self.conn.commit()
 
-    def addEnemyHeroes(self, enemyArray, game_id, playerDatabaseID):
-        addEnemyHeroesStatement = ("UPDATE {}.{} "
+    def addEnemyHeroes(self, enemyArray, gameID, playerDatabaseID):
+        addEnemyHeroesStatement = ("UPDATE `{}` "
             "SET enemyHero1 = '{}', "
             "enemyHero2 = '{}', "
             "enemyHero3 = '{}', "
             "enemyHero4 = '{}', "
             "enemyHero5 = '{}' "
-            "WHERE game_id = {}").format(DB_NAME, playerDatabaseID, enemyArray[0], enemyArray[1],
-            enemyArray[2], enemyArray[3], enemyArray[4], game_id)
-        print(addEnemyHeroesStatement)
+            "WHERE gameID = {}").format(playerDatabaseID, enemyArray[0], enemyArray[1],
+            enemyArray[2], enemyArray[3], enemyArray[4], gameID)
+        #print(addEnemyHeroesStatement)
         self.cursor.execute(addEnemyHeroesStatement)
         self.conn.commit()
 
@@ -182,7 +190,3 @@ class GameSQLConnector:
             print("this player average hero damage is {}").format(avgPlayerHeroDamage)
             return avgPlayerHeroDamage
 
-#         UPDATE customers
-# SET state = 'California',
-#     customer_rep = 32
-# WHERE customer_id > 100;

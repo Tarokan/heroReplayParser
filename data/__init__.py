@@ -215,7 +215,8 @@ class MapTranslator(object):
                         'Hanamura': {'Hanamura', 'Ханамура', '하나무라', '花村'},
                         'Sandbox (Cursed Hollow)': {'Sandbox (Cursed Hollow)'},
                         'Pull Party': {'Pull Party'},
-                        'Braxis Outpost': {'Braxis Outpost'}
+                        'Braxis Outpost': {'Braxis Outpost'},
+                        'Hanamura Temple': {'Hanamura Temple'}
                         }
 
     def __init__(self):
