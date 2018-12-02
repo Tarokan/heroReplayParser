@@ -6,6 +6,7 @@ import sqlconnector
 import io
 import sys
 import argparse
+import os
 
 sys.path.insert(0, './heroprotocol')
 
@@ -40,7 +41,7 @@ def addPlayerData(replay, playerBattleTag):
     gameSQLConnector.addDateTime(replay.replayInfo.startTime, entryid, playerBattleTag)
     gameSQLConnector.addMap(replay.replayInfo.mapName, entryid, playerBattleTag)
     gameSQLConnector.addGameType(replay.replayInfo.gameType, entryid, playerBattleTag)
-    print("hi")
+    print("Uploaded data succesfully!")
     
 def convertResult(gameResult):
     if gameResult == 1: # win condition
@@ -72,39 +73,57 @@ def findPlayer(replay, playerBattleTag):
         if player.battleTag == playerBattleTag:
             return player
     raise ValueError('couldn\'t find a matching player')
+
+def uploadReplay(replayPath, targetBattleTag):
+    # TODO: sanitize the input
+
+    archive = mpyq.MPQArchive(replayPath)
+    import protocol67985 as protocol
+    # TODO: catch exceptions
+    #Parse the header 
+    header = protocol.decode_replay_header(archive.header['user_data_header']['content'])
+    build_number = header['m_version']['m_baseBuild']
+
+    # Get the actual protocol number
+    module_name = 'protocol{}'.format(build_number)
+    protocol = import_module(module_name)
+    
+    print(replayPath)
+    try:
+        replay = processEvents(protocol, archive)
+        addPlayerData(replay, targetBattleTag)
+    except ValueError:
+        pass
         
+
 if __name__ == "__main__":
-    requestedPlayerName = '';
-    if len(commandLineArgs) == 3:
-        requestedPlayerName = commandLineArgs[0]
-        print("Looking for replays with player name " + requestedPlayerName)
-        playerName = commandLineArgs[0]
-        if commandLineArgs[1] == 'add':
-            replayFilePath = commandLineArgs[2]
-
-            archive = mpyq.MPQArchive(replayFilePath)
-
-            #Parse the header
-            header = protocol.decode_replay_header(archive.header['user_data_header']['content'])
-            build_number = header['m_version']['m_baseBuild']
-
-            # Get the actual protocol number
-            module_name = 'protocol{}'.format(build_number)
-            protocol = import_module(module_name)
-
-            replay = processEvents(protocol, archive)
-
-            addPlayerData(replay, requestedPlayerName)
-        if commandLineArgs[1] == 'poll':
-            databaseID = sqlconnector.getPlayerDatabaseID(commandLineArgs[0], commandLineArgs[2])
-            gameSQLConnector = GameSQLConnector()
-            dictionary = gameSQLConnector.queryData(databaseID, "")
-            print(dictionary)
-    else:
-        print("Please use one of the following commands")
-        print("uses: test.py [playername] [add] [replayFilePath]")
-        print("uses: test.py [playername] [poll] [id]")
-
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('playerBattleTag')
+    parser.add_argument('inputPath')
+    parser.add_argument('-d', '--is-directory', help='Tells the parser to search the directory and upload all replays', action='store_true', default=False)
+    parser.add_argument('-r', '--is-replay', help='Tells the parser the input path is a replay', action='store_true', default=False)
+    args = parser.parse_args()
+    
+    playerBattleTag = args.playerBattleTag;
+    inputPath = args.inputPath
+    
+    print("Looking for replays with player BattleTag " + playerBattleTag)
+    
+    if (args.is_replay):
+        uploadReplay(inputPath, playerBattleTag)
+    elif (args.is_directory):
+        for file in os.listdir(inputPath):
+            if file.endswith('.StormReplay'):
+                uploadReplay(inputPath + "\\" + file, playerBattleTag)
+            else:
+                print("skipping {}.".format(file))
+                
+#    if commandLineArgs[1] == 'poll':
+#        databaseID = sqlconnector.getPlayerDatabaseID(commandLineArgs[0], commandLineArgs[2])
+#        gameSQLConnector = GameSQLConnector()
+#        dictionary = gameSQLConnector.queryData(databaseID, "")
+#        print(dictionary)
 
 '''
 details: 

@@ -99,7 +99,7 @@ class Replay:
 
             if not player.isHuman:
                 print "Computer Player Found, Exiting"
-                exit(0)
+                return False
 
     def is_valid_map(self):
         if self.replayInfo.mapName in ['Sandbox (Cursed Hollow)']:
@@ -112,6 +112,7 @@ class Replay:
             print "Games with less than 10 players not supported"
             return False
         return True
+    
 
     def process_replay_initdata(self):
         # return 0
@@ -125,7 +126,7 @@ class Replay:
 
         if not self.replayInfo.is_allowed_game_type():
             print "Game type %s not allowed for parsing" % self.replayInfo.gameType
-            exit(0)
+            raise ValueError('invalid game type')
 
         self.replayInfo.randomVal = initdata['m_syncLobbyState']['m_gameDescription']['m_randomValue']
         self.replayInfo.speed = initdata['m_syncLobbyState']['m_gameDescription']['m_gameSpeed']
