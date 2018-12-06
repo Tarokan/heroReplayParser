@@ -13,6 +13,7 @@ tableColumns = ['gameID', 'game_type', 'result', 'playerHero', 'playerTakedowns'
     'alliedHero2', 'alliedHero3', 'alliedHero4', 'enemyHero1', 'enemyHero2',
     'enemyHero3', 'enemyHero4', 'enemyHero5']
 
+#TODO: sanitize the add statements based on the type limitations
 createTableCommand = (
 "CREATE TABLE `{}` ("
 "   `gameID` INT AUTO_INCREMENT,"
@@ -58,9 +59,10 @@ add_game = ("INSERT INTO `{}` "
 
 class GameSQLConnector:
 
-    def __init__(self):
+    def __init__(self, debug=False):
         self.conn = self.connect()
         self.cursor = self.conn.cursor()
+        self.debug = debug
     
         try:
             self.cursor.execute("USE {}".format(DB_NAME))
@@ -72,6 +74,12 @@ class GameSQLConnector:
             else:
                 print(err)
                 exit(1)
+                
+    def execute(self, statement):
+        if self.debug:
+            print(statement)
+        self.cursor.execute(statement)
+        self.conn.commit()
         
     def create_database(self):
         try:
@@ -127,6 +135,7 @@ class GameSQLConnector:
         self.conn.commit()
 
     def addMap(self, mapName, gameID, playerDatabaseID):
+        mapName = mapName[0:15]
         addMapStatement = ("UPDATE `{}` SET map = '{}' WHERE gameID = {}").format(playerDatabaseID, mapName, gameID)
         self.cursor.execute(addMapStatement)
         self.conn.commit()
@@ -157,7 +166,7 @@ class GameSQLConnector:
             "alliedHero4 = '{}' "
             "WHERE gameID = {}").format(playerDatabaseID, allyArray[0], allyArray[1],
             allyArray[2], allyArray[3], gameID)
-        #print(addAlliedHeroesStatement)
+        print(addAlliedHeroesStatement)
         self.cursor.execute(addAlliedHeroesStatement)
         self.conn.commit()
 
