@@ -78,10 +78,10 @@ class Replay:
         self.replayInfo.gameVersion = baseBuild
 
         if not self.is_valid_map():
-            exit(0)
+            return False
 
         if not self.is_valid_player_size():
-            exit(0)
+            return False
 
         self.replayInfo.gameLoops = header['m_elapsedGameLoops']
         self.players = {}
@@ -98,8 +98,9 @@ class Replay:
             self.players[i] = player
 
             if not player.isHuman:
-                print "Computer Player Found, Exiting"
+                print "Computer Player Found"
                 return False
+        return True
 
     def is_valid_map(self):
         if self.replayInfo.mapName in ['Sandbox (Cursed Hollow)']:
@@ -886,7 +887,8 @@ class Replay:
                 if self.unitsInGame[deadUnitTag].killerPlayerId:
                     # Rule out those shrine minions that disappear once the event completes and have no killer
                     killerId = self.unitsInGame[deadUnitTag].killerPlayerId-1
-                    self.heroList[killerId].mapStats['totalMinionsKilled'] += 1
+                    if killerId < len(self.heroList):
+                        self.heroList[killerId].mapStats['totalMinionsKilled'] += 1
 
 
         if e['_event'] == 'NNet.Replay.Tracker.SUnitTypeChangeEvent':

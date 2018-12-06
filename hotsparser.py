@@ -14,11 +14,12 @@ def processEvents(protocol=None, replayFile=None, team1=None, team2=None, event=
 
     replay_data = Replay(protocol, replayFile, team1, team2, event, stage)
     
-    replay_data.process_replay_details()
+    if not replay_data.process_replay_details():
+        raise ValueError('invalid replay')
         
     if not replay_data.replayInfo.is_allowed_game_type():
         raise ValueError('invalid replay')
-        
+    
     replay_data.process_replay_initdata()
     replay_data.process_replay()
     replay_data.process_replay_attributes()

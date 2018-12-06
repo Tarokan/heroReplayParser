@@ -9,7 +9,7 @@ import re
 import logging
 import time
 
-logDirectory = './logs'
+logDirectory = './logs/'
 
 logging.basicConfig(filename=logDirectory + (str(int(round(time.time() * 1000))) + '.log'), 
                     filemode='w', 
