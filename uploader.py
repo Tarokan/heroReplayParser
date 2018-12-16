@@ -15,7 +15,7 @@ logging.basicConfig(filename=logDirectory + (str(int(round(time.time() * 1000)))
                     filemode='w', 
                     format='%(asctime)s - %(levelname)s - %(message)s', 
                     level=logging.DEBUG)
-logging.info('Beginning parsing session')
+logging.info('Beginning uploading session')
 
 sys.path.insert(0, './heroprotocol')
 from hotsparser import *
@@ -99,17 +99,20 @@ def findPlayer(replay, playerBattleTag):
     raise ValueError('couldn\'t find a matching player')
 
 def uploadReplay(replayPath, targetBattleTag):
-    # TODO: sanitize the input
-
+    
+    logging.info('opening replay MPQ at {}'.format(replayPath))
     archive = mpyq.MPQArchive(replayPath)
     import protocol67985 as protocol
     # TODO: catch exceptions
     #Parse the header 
     header = protocol.decode_replay_header(archive.header['user_data_header']['content'])
     build_number = header['m_version']['m_baseBuild']
+    logging.info('replay protocol build_number: {}'.format(build_number))
 
     # Get the actual protocol number
     module_name = 'protocol{}'.format(build_number)
+    
+    # TODO: catch exception when protocol hasn't been updated yet
     protocol = import_module(module_name)
     
     print(replayPath)
@@ -118,7 +121,23 @@ def uploadReplay(replayPath, targetBattleTag):
         addPlayerData(replay, targetBattleTag)
     except ValueError:
         pass
-        
+
+# don't fix user input, just report an error
+def verifyBattleTag(rawBattleTag):
+    '''
+    Returns false if it's not alphanumeric (no accents), and first letter is not 0.
+    '''
+    
+    # replace this with bnet oauth battletag in a production environment 
+    # this does not allow for accents
+    bnetRegex = re.compile('[^a-zA-Z0-9#]')
+    return (bnetRegex.sub('', rawBattleTag) == rawBattleTag
+        and not rawBattleTag[0].isdigit()
+        and len(rawBattleTag.split('#')) == 2
+        and rawBattleTag.split('#')[1].isdigit())
+
+def log_info(string):
+    logging.info(string)
 
 if __name__ == "__main__":
     
@@ -131,17 +150,26 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     playerBattleTag = args.playerBattleTag;
+    if not verifyBattleTag(playerBattleTag):
+        print('invalid battletag')
+        logging.info('Bad battletag: {}, exiting'.format(playerBattleTag))
+        exit(0)
+        
     inputPath = args.inputPath
     
     print("Looking for replays with player BattleTag " + playerBattleTag)
     
     if (args.is_replayfile):
+        logging.info('file specified: {}'.format(inputPath))
         uploadReplay(inputPath, playerBattleTag)
     elif (args.is_directory):
+        logging.info('directory specified: {}'.format(inputPath))
         for file in os.listdir(inputPath):
             if file.endswith('.StormReplay'):
+                logging.info('found file: {}'.format(file))
                 uploadReplay(inputPath + "\\" + file, playerBattleTag)
             else:
+                logging.info('skipped file not ending in .StormReplay: {}'.format(file))
                 print("skipping {}.".format(file))
                 
 

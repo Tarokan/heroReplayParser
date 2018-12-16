@@ -1,8 +1,9 @@
 import mysql.connector
 from mysql.connector import errorcode, Error
 from ConfigParser import ConfigParser
+import json
  
-DB_NAME = 'heroes'
+DB_CONFIG_LOCATION = './db.config'
 
 tableColumns = ['gameID', 'game_type', 'result', 'playerHero', 'playerTakedowns',
     'playerDeaths', 'playerHeroDamage', 'playerHealing', 'playerSiegeDamage',
@@ -13,6 +14,32 @@ tableColumns = ['gameID', 'game_type', 'result', 'playerHero', 'playerTakedowns'
     'alliedHero2', 'alliedHero3', 'alliedHero4', 'enemyHero1', 'enemyHero2',
     'enemyHero3', 'enemyHero4', 'enemyHero5']
 
+class PlayerHeroGameData:
+    
+    def __init__(self):
+        self._gameID = 0;
+        self.gameType = ''
+        self.gameTimeUTC = ''
+        self.result = ''
+        self.map = ''
+        self.playerHero = ''
+        self.playerTakedowns = 0
+        self.playerTakedowns = 0
+        self.playerDeaths = 0
+        self.playerHeroDamage = 0
+        self.playerHealing = 0
+        self.playerSiegeDamage = 0
+        self.playerStructureDamage = 0
+        self.playerMinionDamage = 0
+        self.playerSelfHealing = 0
+        self.playerDamageTaken = 0
+        self.playerDamageSoaked = 0
+        self.playerExperience = 0
+        self.talentChoices = []
+        self.alliedHeroes = []
+        self.enemyHeroes = []
+        
+        
 #TODO: sanitize the add statements based on the type limitations
 createTableCommand = (
 "CREATE TABLE `{}` ("
@@ -60,20 +87,10 @@ add_game = ("INSERT INTO `{}` "
 class GameSQLConnector:
 
     def __init__(self, debug=False):
+        self.debug = debug
         self.conn = self.connect()
         self.cursor = self.conn.cursor()
-        self.debug = debug
-    
-        try:
-            self.cursor.execute("USE {}".format(DB_NAME))
-        except mysql.connector.Error as err:
-            print("Database {} does not exists.".format(DB_NAME))
-            if err.errno == errorcode.ER_BAD_DB_ERROR:
-                create_database()
-                print("Database {} created successfully.".format(DB_NAME))
-            else:
-                print(err)
-                exit(1)
+        self.setDefaultDatabase()
                 
     def execute(self, statement):
         if self.debug:
@@ -83,7 +100,7 @@ class GameSQLConnector:
         
     def create_database(self):
         try:
-            self.cursor.execute("CREATE DATABASE {} DEFAULT CHARACTER SET 'utf8'".format(DB_NAME))
+            self.cursor.execute("CREATE DATABASE {} DEFAULT CHARACTER SET 'utf8'".format(self.DB_NAME))
         except mysql.connector.Error as err:
             print("Failed creating database: {}".format(err))
             exit(1)
@@ -108,8 +125,12 @@ class GameSQLConnector:
 
     def connect(self):
         try:
-            self.conn = mysql.connector.connect(host='localhost', database='heroes',
-                user='root', password='ch1c0b0s')
+            configData = {}
+            with open(DB_CONFIG_LOCATION, 'r') as f:
+                configData = json.load(f)
+            self.conn = mysql.connector.connect(host=configData['host'], database=configData['database'],
+                user=configData['user'], password=configData['password'])
+            self.DB_NAME = configData['database']
             if self.conn.is_connected():
                 print('connected to MySQL database!')
                 return self.conn
@@ -120,6 +141,17 @@ class GameSQLConnector:
             print(e)
             exit(0)
 
+    def setDefaultDatabase(self):
+        try:
+            self.cursor.execute("USE {}".format(self.DB_NAME))
+        except mysql.connector.Error as err:
+            print("Database {} does not exists.".format(self.DB_NAME))
+            if err.errno == errorcode.ER_BAD_DB_ERROR:
+                create_database()
+                print("Database {} created successfully.".format(self.DB_NAME))
+            else:
+                print(err)
+                exit(1)
 
     def addHeroData(self, game_data, playerDatabaseID):
         self.createTable(playerDatabaseID)
@@ -130,14 +162,16 @@ class GameSQLConnector:
         return gameId
     
     def addDateTime(self, dateTime, gameID, playerDatabaseID):
-        addDateTimeStatement = ("UPDATE `{}` SET gameTimeUTC = '{}' WHERE gameID = {}").format(playerDatabaseID, dateTime, gameID)
-        self.cursor.execute(addDateTimeStatement)
+        addDateTimeStatement = ("UPDATE `{}` SET gameTimeUTC = %s WHERE gameID = %s").format(playerDatabaseID)
+        data = (dateTime, gameID)
+        self.cursor.execute(addDateTimeStatement, data)
         self.conn.commit()
 
     def addMap(self, mapName, gameID, playerDatabaseID):
         mapName = mapName[0:15]
-        addMapStatement = ("UPDATE `{}` SET map = '{}' WHERE gameID = {}").format(playerDatabaseID, mapName, gameID)
-        self.cursor.execute(addMapStatement)
+        data = (mapName, gameID)
+        addMapStatement = ("UPDATE `{}` SET map = %s WHERE gameID = %s").format(playerDatabaseID)
+        self.cursor.execute(addMapStatement, data)
         self.conn.commit()
         
     def addGameType(self, gameType, gameID, playerDatabaseID):
