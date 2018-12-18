@@ -60,6 +60,7 @@ def addPlayerData(replay, playerBattleTag):
         gameSQLConnector.addMap(sanitize(replay.replayInfo.mapName), entryid, playerBattleTag)
         gameSQLConnector.addGameType(sanitize(replay.replayInfo.gameType), entryid, playerBattleTag)
         print("Uploaded data succesfully!")
+        log_info("replay data uploaded successfully")
     except Exception as e:
         print("*** exception occurred, check log")
         print(e)
@@ -117,6 +118,7 @@ def uploadReplay(replayPath, targetBattleTag):
     
     print(replayPath)
     try:
+        log_info("running through the parser")
         replay = processEvents(protocol, archive)
         addPlayerData(replay, targetBattleTag)
     except ValueError:

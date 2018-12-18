@@ -217,8 +217,8 @@ class MapTranslator(object):
                         'Pull Party': {'Pull Party'},
                         'Braxis Outpost': {'Braxis Outpost'},
                         'Hanamura Temple': {'Hanamura Temple'},
-                        'Alterac Pass': {'Alterac Pass'}
-                    
+                        'Alterac Pass': {'Alterac Pass'},
+                        'Volskaya Foundry': {'Volskaya Foundry'}
                         }
 
     def __init__(self):
