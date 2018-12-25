@@ -17,7 +17,7 @@ tableColumns = ['gameID', 'game_type', 'result', 'playerHero', 'playerTakedowns'
 class PlayerHeroGameData:
     
     def __init__(self):
-        self._gameID = 0;
+        self._gameID = 0
         self.gameType = ''
         self.gameTimeUTC = ''
         self.result = ''
@@ -147,7 +147,7 @@ class GameSQLConnector:
         except mysql.connector.Error as err:
             print("Database {} does not exists.".format(self.DB_NAME))
             if err.errno == errorcode.ER_BAD_DB_ERROR:
-                create_database()
+                self.create_database()
                 print("Database {} created successfully.".format(self.DB_NAME))
             else:
                 print(err)
@@ -188,7 +188,7 @@ class GameSQLConnector:
             baseStatement = baseStatement + " talentChoice{} = '{} '".format(i + 1, talents[i])
             if i != len(talents) - 1:
                 baseStatement = baseStatement + ","
-        baseStatement = baseStatement + " WHERE gameID = {}".format(gameID);
+        baseStatement = baseStatement + " WHERE gameID = {}".format(gameID)
         self.cursor.execute(baseStatement)
         self.conn.commit()
 
@@ -218,7 +218,7 @@ class GameSQLConnector:
         self.conn.commit()
 
     def queryDataAverage(self, playerDatabaseID, item):
-        someStatement = "SELECT AVG({}}) 'avgPlayerHeroDamage' FROM heroes.p_midreadias_67731;".format(item)
+        someStatement = "SELECT AVG({}) 'avgPlayerHeroDamage' FROM heroes.p_midreadias_67731;".format(item)
         self.cursor.execute(someStatement)
 
         for (avgPlayerHeroDamage) in self.cursor:
@@ -226,7 +226,7 @@ class GameSQLConnector:
             return avgPlayerHeroDamage
 
     def queryDataAverageForHero(self, playerDatabaseID, item, hero):
-        someStatement = "SELECT AVG({}}) 'avgPlayerHeroDamage' FROM heroes.p_midreadias_67731 WHERE playerHero = {};".format(item, hero)
+        someStatement = "SELECT AVG({}) 'avgPlayerHeroDamage' FROM heroes.p_midreadias_67731 WHERE playerHero = {};".format(item, hero)
         self.cursor.execute(someStatement)
 
         for (avgPlayerHeroDamage) in self.cursor:
